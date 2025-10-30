@@ -1,0 +1,1066 @@
+Patched Gemma3MLP
+Patched Gemma3RMSNorm
+Patched Dropout
+Patched transformers.models.gemma3.modeling_gemma3
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./google/gemma-3-12b-itnewsample.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
+Document Class: standalone 2018/03/26 v1.3a Class to compile TeX sub-files stan
+dalone
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+(|extractbb --version))
+
+LaTeX Warning: Unused global option(s):
+    [arwidth].
+
+No file gemma-3-12b-itnewsample.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+Missing character: There is no 背 (U+80CC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 景 (U+666F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ： (U+FF1A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 穆 (U+7A46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 朗 (U+6717) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 玛 (U+739B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 吸 (U+5438) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 引 (U+5F15) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 众 (U+4F17) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 多 (U+591A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 者 (U+8005) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 包 (U+5305) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 括 (U+62EC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 经 (U+7ECF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 验 (U+9A8C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 丰 (U+4E30) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 富 (U+5BCC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 者 (U+8005) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 主 (U+4E3B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 要 (U+8981) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 攀 (U+6500) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 路 (U+8DEF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 有 (U+6709) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 两 (U+4E24) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 条 (U+6761) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 条 (U+6761) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 从 (U+4ECE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尼 (U+5C3C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 泊 (U+6CCA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尔 (U+5C14) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 东 (U+4E1C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 南 (U+5357) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 部 (U+90E8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 接 (U+63A5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 近 (U+8FD1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 称 (U+79F0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 为 (U+4E3A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 标 (U+6807) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 准 (U+51C6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 路 (U+8DEF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 另 (U+53E6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 条 (U+6761) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 从 (U+4ECE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 西 (U+897F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 藏 (U+85CF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 北 (U+5317) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 部 (U+90E8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 接 (U+63A5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 近 (U+8FD1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 虽 (U+867D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 然 (U+7136) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 标 (U+6807) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 准 (U+51C6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 路 (U+8DEF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 对 (U+5BF9) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 攀 (U+6500) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 穆 (U+7A46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 朗 (U+6717) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 玛 (U+739B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 技 (U+6280) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 术 (U+672F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 挑 (U+6311) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 战 (U+6218) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 不 (U+4E0D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 大 (U+5927) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 但 (U+4F46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 也 (U+4E5F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 存 (U+5B58) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 高 (U+9AD8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 原 (U+539F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 反 (U+53CD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 应 (U+5E94) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 、 (U+3001) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 恶 (U+6076) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 劣 (U+52A3) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 天 (U+5929) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 气 (U+6C14) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 和 (U+548C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 大 (U+5927) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 风 (U+98CE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 等 (U+7B49) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 危 (U+5371) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 以 (U+4EE5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 及 (U+53CA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 雪 (U+96EA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 崩 (U+5D29) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 和 (U+548C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 昆 (U+6606) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 布 (U+5E03) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 冰 (U+51B0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 瀑 (U+7011) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 带 (U+5E26) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 来 (U+6765) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 危 (U+5371) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 截 (U+622A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 至 (U+81F3) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 月 (U+6708) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 已 (U+5DF2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 有 (U+6709) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 人 (U+4EBA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 穆 (U+7A46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 朗 (U+6717) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 玛 (U+739B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 丧 (U+4E27) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 生 (U+751F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 由 (U+7531) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 于 (U+4E8E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 情 (U+60C5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 况 (U+51B5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 危 (U+5371) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 上 (U+4E0A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 仍 (U+4ECD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 有 (U+6709) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 多 (U+591A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 具 (U+5177) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尸 (U+5C38) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 体 (U+4F53) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 未 (U+672A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 被 (U+88AB) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 移 (U+79FB) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 走 (U+8D70) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 有 (U+6709) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 记 (U+8BB0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 录 (U+5F55) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 以 (U+4EE5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 来 (U+6765) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 首 (U+9996) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 穆 (U+7A46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 朗 (U+6717) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 玛 (U+739B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 是 (U+662F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 国 (U+56FD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 者 (U+8005) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 由 (U+7531) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 于 (U+4E8E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 当 (U+5F53) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 时 (U+65F6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尼 (U+5C3C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 泊 (U+6CCA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尔 (U+5C14) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 不 (U+4E0D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 允 (U+5141) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 许 (U+8BB8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 外 (U+5916) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 国 (U+56FD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 人 (U+4EBA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 入 (U+5165) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 境 (U+5883) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 国 (U+56FD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 人 (U+4EBA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 多 (U+591A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尝 (U+5C1D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 试 (U+8BD5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 从 (U+4ECE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 西 (U+897F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 藏 (U+85CF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 侧 (U+4FA7) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 沿 (U+6CBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 北 (U+5317) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 脊 (U+810A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 路 (U+8DEF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 攀 (U+6500) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 国 (U+56FD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 首 (U+9996) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 侦 (U+4FA6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 察 (U+5BDF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 探 (U+63A2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 队 (U+961F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 北 (U+5317) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 坳 (U+5773) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 到 (U+5230) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 达 (U+8FBE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 米 (U+7C73) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尺 (U+5C3A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 高 (U+9AD8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 度 (U+5EA6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 探 (U+63A2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 队 (U+961F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 将 (U+5C06) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 北 (U+5317) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 脊 (U+810A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 路 (U+8DEF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 推 (U+63A8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 高 (U+9AD8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 至 (U+81F3) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 米 (U+7C73) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尺 (U+5C3A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 标 (U+6807) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 志 (U+5FD7) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 着 (U+7740) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 人 (U+4EBA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 类 (U+7C7B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 首 (U+9996) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 攀 (U+6500) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 超 (U+8D85) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 过 (U+8FC7) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 米 (U+7C73) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尺 (U+5C3A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 高 (U+9AD8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 度 (U+5EA6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 探 (U+63A2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 队 (U+961F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 留 (U+7559) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 下 (U+4E0B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 穆 (U+7A46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 朗 (U+6717) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 玛 (U+739B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 至 (U+81F3) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 今 (U+4ECA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 最 (U+6700) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 大 (U+5927) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 谜 (U+8C1C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 团 (U+56E2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 之 (U+4E4B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ： (U+FF1A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 乔 (U+4E54) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 治 (U+6CBB) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 马 (U+9A6C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 洛 (U+6D1B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 里 (U+91CC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 和 (U+548C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 安 (U+5B89) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 德 (U+5FB7) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 鲁 (U+9C81) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 欧 (U+6B27) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 文 (U+6587) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 于 (U+4E8E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 月 (U+6708) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 日 (U+65E5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 进 (U+8FDB) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 行 (U+884C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 最 (U+6700) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 后 (U+540E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尝 (U+5C1D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 试 (U+8BD5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 但 (U+4F46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 去 (U+53BB) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 不 (U+4E0D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 复 (U+590D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 返 (U+8FD4) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 引 (U+5F15) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 发 (U+53D1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 关 (U+5173) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 于 (U+4E8E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 他 (U+4ED6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 们 (U+4EEC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 是 (U+662F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 否 (U+5426) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 是 (U+662F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 第 (U+7B2C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 批 (U+6279) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 者 (U+8005) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 争 (U+4E89) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 论 (U+8BBA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 丹 (U+4E39) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 增 (U+589E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 诺 (U+8BFA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尔 (U+5C14) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 盖 (U+76D6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 和 (U+548C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 埃 (U+57C3) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 德 (U+5FB7) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 蒙 (U+8499) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 希 (U+5E0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 拉 (U+62C9) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 里 (U+91CC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 使 (U+4F7F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 用 (U+7528) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 东 (U+4E1C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 南 (U+5357) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 脊 (U+810A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 路 (U+8DEF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 首 (U+9996) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 穆 (U+7A46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 朗 (U+6717) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 玛 (U+739B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 这 (U+8FD9) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 是 (U+662F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 有 (U+6709) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 记 (U+8BB0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 录 (U+5F55) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 以 (U+4EE5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 来 (U+6765) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 第 (U+7B2C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 诺 (U+8BFA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尔 (U+5C14) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 盖 (U+76D6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 前 (U+524D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 作 (U+4F5C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 为 (U+4E3A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 瑞 (U+745E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 士 (U+58EB) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 探 (U+63A2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 队 (U+961F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 员 (U+5458) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 米 (U+7C73) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 英 (U+82F1) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 尺 (U+5C3A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 月 (U+6708) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 日 (U+65E5) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 由 (U+7531) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 王 (U+738B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 富 (U+5BCC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 洲 (U+6D32) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 、 (U+3001) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 贡 (U+8D21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 布 (U+5E03) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 和 (U+548C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 屈 (U+5C48) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 银 (U+94F6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 华 (U+534E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 组 (U+7EC4) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 成 (U+6210) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 中 (U+4E2D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 国 (U+56FD) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 山 (U+5C71) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 队 (U+961F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 首 (U+9996) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 次 (U+6B21) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 从 (U+4ECE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 北 (U+5317) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 脊 (U+810A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 顶 (U+9876) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 珠 (U+73E0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 峰 (U+5CF0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 问 (U+95EE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 题 (U+9898) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ： (U+FF1A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 他 (U+4ED6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 们 (U+4EEC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 攀 (U+6500) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 多 (U+591A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 高 (U+9AD8) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ？ (U+FF1F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 根 (U+6839) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 据 (U+636E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 文 (U+6587) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 献 (U+732E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 记 (U+8BB0) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 载 (U+8F7D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 年 (U+5E74) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 探 (U+63A2) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 险 (U+9669) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 队 (U+961F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 攀 (U+6500) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 登 (U+767B) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 了 (U+4E86) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \hbox (57.74034pt too wide) in paragraph at lines 10--10
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+ [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
+[][][][][][]
+[1] (google/gemma-3-12b-itnewsample.aux) )
+(see the transcript file for additional information)
+Output written on google/gemma-3-12b-itnewsample.pdf (1 page).
+Transcript written on google/gemma-3-12b-itnewsample.log.
+PDF file generated successfully.
