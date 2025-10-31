@@ -7,6 +7,8 @@ from lxt.efficient import monkey_patch
 from lxt.utils import pdf_heatmap, clean_tokens
 from util import save_grad_info
 
+import os
+
 # modify the Qwen3 module to compute LRP in the backward pass
 monkey_patch(modeling_qwen3, verbose=True)
 
@@ -16,8 +18,10 @@ quantization_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16, # use bfloat16 to prevent overflow in gradients
 )
 
-path = '/mnt/Qwen3-1.7B'
-model = modeling_qwen3.Qwen3ForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16, quantization_config=quantization_config)
+path = '/root/autodl-fs/model_zoo/Qwen/Qwen3-1.7B'
+output_dir = '/root/autodl-fs/output_grad/qwen3'
+os.makedirs(output_dir, exist_ok=True)
+model = modeling_qwen3.Qwen3ForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16)#, quantization_config=quantization_config)
 
 # optional gradient checkpointing to save memory (2x forward pass)
 model.train()
@@ -25,7 +29,7 @@ model.gradient_checkpointing_enable()
 
 # deactive gradients on parameters to save memory
 for param in model.parameters():
-    param.requires_grad = False
+    param.requires_grad = True
 
 tokenizer = AutoTokenizer.from_pretrained(path)
 
@@ -36,15 +40,18 @@ Question: How high did they climb in 1922? According to the text, the 1922 exped
 input_ids = tokenizer(prompt, return_tensors="pt", add_special_tokens=True).input_ids.to(model.device)
 input_embeds = model.get_input_embeddings()(input_ids)
 
+input_embeds.retain_grad()
+
 # inference and get the maximum logit at the last position (we can also explain other tokens)
 output_logits = model(inputs_embeds=input_embeds.requires_grad_(), use_cache=False).logits
 max_logits, max_indices = torch.max(output_logits[0, -1, :], dim=-1)
 
 # Backward pass (the relevance is initialized with the value of max_logits)
 # This initiates the LRP computation through the network
+max_logits.retain_grad()
 max_logits.backward()
 
-save_grad_info(model, 'mnt/LRP-eXplains-Transformers/output_grad/qwen3/weight_gradients.json')
+save_grad_info(model, os.path.join(output_dir, 'weight_gradients.json'))
 
 # obtain relevance by computing Input * Gradient
 relevance = (input_embeds * input_embeds.grad).float().sum(-1).detach().cpu()[0] # cast to float32 before summation for higher precision
