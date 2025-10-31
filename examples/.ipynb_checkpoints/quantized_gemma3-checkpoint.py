@@ -15,7 +15,7 @@ quantization_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16, # use bfloat16 to prevent overflow in gradients
 )
 
-path = "google/gemma-3-12b-it"#'google/gemma-3-4b-it'
+path = "/root/autodl-fs/model_zoo/google/gemma-3-1b-it"#'google/gemma-3-4b-it'
 striing_output='newsample_v2'
 model = modeling_gemma3.Gemma3ForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16, quantization_config=quantization_config)
 
