@@ -21,8 +21,8 @@ def save_grad_info(model, save_path='weight_gradients.json'):
     print("\n=== 按梯度范数排序 ===")
     sorted_gradients = sorted(weight_gradients.items(), key=lambda x: torch.norm(x[1]), reverse=True)
 
-    for name, grad in sorted_gradients[:10]:  # 显示前10个梯度最大的权重
-        print(f"{name}: norm = {torch.norm(grad):.6f}")
+    for name, grad in sorted_gradients:  # 显示前个梯度最大的权重
+        print(f"{name}: norm = {torch.norm(grad):.6f}, shape:{ grad.shape}")
 
     # 可选：保存梯度信息到文件
     import json
