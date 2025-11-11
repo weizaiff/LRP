@@ -1,8 +1,22 @@
 import torch
 import os
+
+def save_per_example_lrp_res(res_map, model):
+    for name, param in model.named_parameters():
+        # 检查参数是否有梯度
+        print(name,  param.grad is not None)
+        if param.grad is not None:
+            if len(param.grad.shape)>1:
+                res_map[name].append(param.grad.clone().detach().sum(dim=-1).squeeze(-1))
+            else:
+                res_map[name].append(param.grad.clone().detach())
+
+    return res_map
+    
 def save_grad_info(model, save_path='weight_gradients.json'):
     # 获取权重名称和对应的梯度
     weight_gradients = {}
+    weight_gradients_we = {}
 
     # 遍历模型的所有命名参数
     for name, param in model.named_parameters():
@@ -11,6 +25,7 @@ def save_grad_info(model, save_path='weight_gradients.json'):
         if param.grad is not None:
             # 存储权重名称和对应的梯度
             weight_gradients[name] = param.grad.clone().detach()
+            weight_gradients_we[name] = param.clone().detach()
             print(f"Parameter: {name}")
             print(f"  Gradient shape: {param.grad.shape}")
             print(f"  Gradient norm: {torch.norm(param.grad):.6f}")
@@ -22,7 +37,7 @@ def save_grad_info(model, save_path='weight_gradients.json'):
     sorted_gradients = sorted(weight_gradients.items(), key=lambda x: torch.norm(x[1]), reverse=True)
 
     for name, grad in sorted_gradients:  # 显示前个梯度最大的权重
-        print(f"{name}: norm = {torch.norm(grad):.6f}, shape:{ grad.shape}")
+        print(f"{name}: norm = {torch.norm(grad):.6f}, grad shape:{ grad.shape} weight shape:{weight_gradients_we[name].shape}")
 
     # 可选：保存梯度信息到文件
     import json
