@@ -1,0 +1,2431 @@
+Patched Gemma3MLP
+Patched Gemma3RMSNorm
+Patched Dropout
+Patched transformers.models.gemma3.modeling_gemma3
+before_last_token_logits shape torch.Size([1, 451])
+model.embed_tokens.weight True
+Parameter: model.embed_tokens.weight
+  Gradient shape: torch.Size([262144, 1152])
+  Gradient norm: 15.125000
+  Gradient stats - min: -2.250000, max: 4.031250, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.0.self_attn.q_proj.weight True
+Parameter: model.layers.0.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 0.507812
+  Gradient stats - min: -0.038086, max: 0.045654, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.0.self_attn.k_proj.weight True
+Parameter: model.layers.0.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.539062
+  Gradient stats - min: -0.184570, max: 0.174805, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.0.self_attn.v_proj.weight True
+Parameter: model.layers.0.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.843750
+  Gradient stats - min: -0.400391, max: 0.294922, mean: -0.000015
+--------------------------------------------------------------------------------
+model.layers.0.self_attn.o_proj.weight True
+Parameter: model.layers.0.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 14.875000
+  Gradient stats - min: -2.890625, max: 2.093750, mean: -0.000055
+--------------------------------------------------------------------------------
+model.layers.0.self_attn.q_norm.weight True
+Parameter: model.layers.0.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.031128
+  Gradient stats - min: -0.006500, max: 0.011902, mean: 0.000595
+--------------------------------------------------------------------------------
+model.layers.0.self_attn.k_norm.weight True
+Parameter: model.layers.0.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.044678
+  Gradient stats - min: -0.020142, max: 0.018921, mean: 0.000492
+--------------------------------------------------------------------------------
+model.layers.0.mlp.gate_proj.weight True
+Parameter: model.layers.0.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 4.281250
+  Gradient stats - min: -1.476562, max: 2.281250, mean: -0.000004
+--------------------------------------------------------------------------------
+model.layers.0.mlp.up_proj.weight True
+Parameter: model.layers.0.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 4.312500
+  Gradient stats - min: -1.273438, max: 0.683594, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.0.mlp.down_proj.weight True
+Parameter: model.layers.0.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 20.375000
+  Gradient stats - min: -9.437500, max: 1.992188, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.0.input_layernorm.weight True
+Parameter: model.layers.0.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.035645
+  Gradient stats - min: -0.023560, max: 0.010925, mean: 0.000118
+--------------------------------------------------------------------------------
+model.layers.0.post_attention_layernorm.weight True
+Parameter: model.layers.0.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.470703
+  Gradient stats - min: -0.135742, max: 0.135742, mean: -0.000832
+--------------------------------------------------------------------------------
+model.layers.0.pre_feedforward_layernorm.weight True
+Parameter: model.layers.0.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.511719
+  Gradient stats - min: -0.116211, max: 0.482422, mean: 0.000675
+--------------------------------------------------------------------------------
+model.layers.0.post_feedforward_layernorm.weight True
+Parameter: model.layers.0.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.169922
+  Gradient stats - min: -0.078613, max: 0.081543, mean: 0.000313
+--------------------------------------------------------------------------------
+model.layers.1.self_attn.q_proj.weight True
+Parameter: model.layers.1.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.789062
+  Gradient stats - min: -0.466797, max: 0.585938, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.1.self_attn.k_proj.weight True
+Parameter: model.layers.1.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.894531
+  Gradient stats - min: -0.271484, max: 0.400391, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.1.self_attn.v_proj.weight True
+Parameter: model.layers.1.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 3.703125
+  Gradient stats - min: -0.851562, max: 1.257812, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.1.self_attn.o_proj.weight True
+Parameter: model.layers.1.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 7.250000
+  Gradient stats - min: -2.031250, max: 1.140625, mean: -0.000037
+--------------------------------------------------------------------------------
+model.layers.1.self_attn.q_norm.weight True
+Parameter: model.layers.1.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.060791
+  Gradient stats - min: -0.022949, max: 0.029297, mean: 0.000626
+--------------------------------------------------------------------------------
+model.layers.1.self_attn.k_norm.weight True
+Parameter: model.layers.1.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.037598
+  Gradient stats - min: -0.020264, max: 0.013855, mean: 0.000242
+--------------------------------------------------------------------------------
+model.layers.1.mlp.gate_proj.weight True
+Parameter: model.layers.1.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.757812
+  Gradient stats - min: -0.414062, max: 0.146484, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.1.mlp.up_proj.weight True
+Parameter: model.layers.1.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.312500
+  Gradient stats - min: -0.570312, max: 0.257812, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.1.mlp.down_proj.weight True
+Parameter: model.layers.1.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 5.937500
+  Gradient stats - min: -0.605469, max: 0.664062, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.1.input_layernorm.weight True
+Parameter: model.layers.1.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.135742
+  Gradient stats - min: -0.002304, max: 0.088867, mean: 0.000347
+--------------------------------------------------------------------------------
+model.layers.1.post_attention_layernorm.weight True
+Parameter: model.layers.1.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.158203
+  Gradient stats - min: -0.018188, max: 0.086914, mean: 0.000820
+--------------------------------------------------------------------------------
+model.layers.1.pre_feedforward_layernorm.weight True
+Parameter: model.layers.1.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.289062
+  Gradient stats - min: -0.281250, max: 0.021729, mean: 0.000305
+--------------------------------------------------------------------------------
+model.layers.1.post_feedforward_layernorm.weight True
+Parameter: model.layers.1.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.063965
+  Gradient stats - min: -0.013428, max: 0.009033, mean: 0.000824
+--------------------------------------------------------------------------------
+model.layers.2.self_attn.q_proj.weight True
+Parameter: model.layers.2.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.703125
+  Gradient stats - min: -0.640625, max: 0.515625, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.2.self_attn.k_proj.weight True
+Parameter: model.layers.2.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.644531
+  Gradient stats - min: -0.208984, max: 0.246094, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.2.self_attn.v_proj.weight True
+Parameter: model.layers.2.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.328125
+  Gradient stats - min: -0.250000, max: 0.243164, mean: -0.000007
+--------------------------------------------------------------------------------
+model.layers.2.self_attn.o_proj.weight True
+Parameter: model.layers.2.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 3.140625
+  Gradient stats - min: -0.227539, max: 0.255859, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.2.self_attn.q_norm.weight True
+Parameter: model.layers.2.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.100098
+  Gradient stats - min: -0.020630, max: 0.076172, mean: 0.000984
+--------------------------------------------------------------------------------
+model.layers.2.self_attn.k_norm.weight True
+Parameter: model.layers.2.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.064941
+  Gradient stats - min: -0.030762, max: 0.027344, mean: 0.000675
+--------------------------------------------------------------------------------
+model.layers.2.mlp.gate_proj.weight True
+Parameter: model.layers.2.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.671875
+  Gradient stats - min: -0.539062, max: 0.234375, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.2.mlp.up_proj.weight True
+Parameter: model.layers.2.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.531250
+  Gradient stats - min: -0.582031, max: 0.558594, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.2.mlp.down_proj.weight True
+Parameter: model.layers.2.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 10.000000
+  Gradient stats - min: -2.421875, max: 1.031250, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.2.input_layernorm.weight True
+Parameter: model.layers.2.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.105957
+  Gradient stats - min: -0.020386, max: 0.094727, mean: 0.000248
+--------------------------------------------------------------------------------
+model.layers.2.post_attention_layernorm.weight True
+Parameter: model.layers.2.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.103516
+  Gradient stats - min: -0.037109, max: 0.055664, mean: 0.000706
+--------------------------------------------------------------------------------
+model.layers.2.pre_feedforward_layernorm.weight True
+Parameter: model.layers.2.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.675781
+  Gradient stats - min: -0.671875, max: 0.037109, mean: -0.000320
+--------------------------------------------------------------------------------
+model.layers.2.post_feedforward_layernorm.weight True
+Parameter: model.layers.2.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.058105
+  Gradient stats - min: -0.034180, max: 0.022949, mean: 0.000477
+--------------------------------------------------------------------------------
+model.layers.3.self_attn.q_proj.weight True
+Parameter: model.layers.3.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 0.992188
+  Gradient stats - min: -0.380859, max: 0.294922, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.3.self_attn.k_proj.weight True
+Parameter: model.layers.3.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.707031
+  Gradient stats - min: -0.224609, max: 0.277344, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.3.self_attn.v_proj.weight True
+Parameter: model.layers.3.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.343750
+  Gradient stats - min: -0.597656, max: 0.408203, mean: -0.000009
+--------------------------------------------------------------------------------
+model.layers.3.self_attn.o_proj.weight True
+Parameter: model.layers.3.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 7.718750
+  Gradient stats - min: -1.000000, max: 0.878906, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.3.self_attn.q_norm.weight True
+Parameter: model.layers.3.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.067871
+  Gradient stats - min: -0.058105, max: 0.016602, mean: 0.000372
+--------------------------------------------------------------------------------
+model.layers.3.self_attn.k_norm.weight True
+Parameter: model.layers.3.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.024902
+  Gradient stats - min: -0.006195, max: 0.006836, mean: 0.000366
+--------------------------------------------------------------------------------
+model.layers.3.mlp.gate_proj.weight True
+Parameter: model.layers.3.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.015625
+  Gradient stats - min: -0.468750, max: 0.341797, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.3.mlp.up_proj.weight True
+Parameter: model.layers.3.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.796875
+  Gradient stats - min: -0.742188, max: 0.470703, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.3.mlp.down_proj.weight True
+Parameter: model.layers.3.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 13.625000
+  Gradient stats - min: -3.578125, max: 1.171875, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.3.input_layernorm.weight True
+Parameter: model.layers.3.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.082520
+  Gradient stats - min: -0.062012, max: 0.007996, mean: -0.000112
+--------------------------------------------------------------------------------
+model.layers.3.post_attention_layernorm.weight True
+Parameter: model.layers.3.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.150391
+  Gradient stats - min: -0.100586, max: 0.023560, mean: -0.000069
+--------------------------------------------------------------------------------
+model.layers.3.pre_feedforward_layernorm.weight True
+Parameter: model.layers.3.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.229492
+  Gradient stats - min: -0.210938, max: 0.022949, mean: 0.000221
+--------------------------------------------------------------------------------
+model.layers.3.post_feedforward_layernorm.weight True
+Parameter: model.layers.3.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.057373
+  Gradient stats - min: -0.017090, max: 0.028931, mean: 0.000603
+--------------------------------------------------------------------------------
+model.layers.4.self_attn.q_proj.weight True
+Parameter: model.layers.4.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 0.664062
+  Gradient stats - min: -0.157227, max: 0.104492, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.4.self_attn.k_proj.weight True
+Parameter: model.layers.4.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.957031
+  Gradient stats - min: -0.257812, max: 0.235352, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.4.self_attn.v_proj.weight True
+Parameter: model.layers.4.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 3.765625
+  Gradient stats - min: -0.625000, max: 0.480469, mean: -0.000014
+--------------------------------------------------------------------------------
+model.layers.4.self_attn.o_proj.weight True
+Parameter: model.layers.4.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 6.937500
+  Gradient stats - min: -0.578125, max: 0.234375, mean: -0.000009
+--------------------------------------------------------------------------------
+model.layers.4.self_attn.q_norm.weight True
+Parameter: model.layers.4.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.074707
+  Gradient stats - min: -0.019653, max: 0.029541, mean: 0.001404
+--------------------------------------------------------------------------------
+model.layers.4.self_attn.k_norm.weight True
+Parameter: model.layers.4.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.056396
+  Gradient stats - min: -0.032715, max: 0.015137, mean: 0.000690
+--------------------------------------------------------------------------------
+model.layers.4.mlp.gate_proj.weight True
+Parameter: model.layers.4.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.890625
+  Gradient stats - min: -0.738281, max: 0.140625, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.4.mlp.up_proj.weight True
+Parameter: model.layers.4.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.140625
+  Gradient stats - min: -0.621094, max: 0.730469, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.4.mlp.down_proj.weight True
+Parameter: model.layers.4.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 25.250000
+  Gradient stats - min: -4.343750, max: 7.937500, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.4.input_layernorm.weight True
+Parameter: model.layers.4.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.215820
+  Gradient stats - min: -0.001808, max: 0.160156, mean: 0.000549
+--------------------------------------------------------------------------------
+model.layers.4.post_attention_layernorm.weight True
+Parameter: model.layers.4.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.079590
+  Gradient stats - min: -0.016357, max: 0.045166, mean: 0.000702
+--------------------------------------------------------------------------------
+model.layers.4.pre_feedforward_layernorm.weight True
+Parameter: model.layers.4.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.124023
+  Gradient stats - min: -0.053955, max: 0.078613, mean: 0.000372
+--------------------------------------------------------------------------------
+model.layers.4.post_feedforward_layernorm.weight True
+Parameter: model.layers.4.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.140625
+  Gradient stats - min: -0.018188, max: 0.131836, mean: 0.000404
+--------------------------------------------------------------------------------
+model.layers.5.self_attn.q_proj.weight True
+Parameter: model.layers.5.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 0.957031
+  Gradient stats - min: -0.140625, max: 0.176758, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.5.self_attn.k_proj.weight True
+Parameter: model.layers.5.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.347656
+  Gradient stats - min: -0.057617, max: 0.060059, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.5.self_attn.v_proj.weight True
+Parameter: model.layers.5.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 4.031250
+  Gradient stats - min: -0.734375, max: 0.714844, mean: 0.000008
+--------------------------------------------------------------------------------
+model.layers.5.self_attn.o_proj.weight True
+Parameter: model.layers.5.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 5.843750
+  Gradient stats - min: -0.878906, max: 0.656250, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.5.self_attn.q_norm.weight True
+Parameter: model.layers.5.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.011353
+  Gradient stats - min: -0.003845, max: 0.003830, mean: 0.000263
+--------------------------------------------------------------------------------
+model.layers.5.self_attn.k_norm.weight True
+Parameter: model.layers.5.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.007935
+  Gradient stats - min: -0.003296, max: 0.001938, mean: 0.000180
+--------------------------------------------------------------------------------
+model.layers.5.mlp.gate_proj.weight True
+Parameter: model.layers.5.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.875000
+  Gradient stats - min: -0.343750, max: 0.167969, mean: -0.000006
+--------------------------------------------------------------------------------
+model.layers.5.mlp.up_proj.weight True
+Parameter: model.layers.5.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.625000
+  Gradient stats - min: -0.281250, max: 0.433594, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.5.mlp.down_proj.weight True
+Parameter: model.layers.5.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 8.375000
+  Gradient stats - min: -1.140625, max: 0.494141, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.5.input_layernorm.weight True
+Parameter: model.layers.5.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 1.210938
+  Gradient stats - min: -0.004578, max: 1.195312, mean: 0.001549
+--------------------------------------------------------------------------------
+model.layers.5.post_attention_layernorm.weight True
+Parameter: model.layers.5.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.077148
+  Gradient stats - min: -0.013550, max: 0.053467, mean: 0.000263
+--------------------------------------------------------------------------------
+model.layers.5.pre_feedforward_layernorm.weight True
+Parameter: model.layers.5.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.269531
+  Gradient stats - min: -0.259766, max: 0.024170, mean: 0.000073
+--------------------------------------------------------------------------------
+model.layers.5.post_feedforward_layernorm.weight True
+Parameter: model.layers.5.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.065918
+  Gradient stats - min: -0.055176, max: 0.021851, mean: 0.000221
+--------------------------------------------------------------------------------
+model.layers.6.self_attn.q_proj.weight True
+Parameter: model.layers.6.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.804688
+  Gradient stats - min: -0.267578, max: 0.332031, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.6.self_attn.k_proj.weight True
+Parameter: model.layers.6.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.355469
+  Gradient stats - min: -0.102539, max: 0.126953, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.6.self_attn.v_proj.weight True
+Parameter: model.layers.6.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.570312
+  Gradient stats - min: -0.255859, max: 0.273438, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.6.self_attn.o_proj.weight True
+Parameter: model.layers.6.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 5.000000
+  Gradient stats - min: -0.220703, max: 0.168945, mean: 0.000006
+--------------------------------------------------------------------------------
+model.layers.6.self_attn.q_norm.weight True
+Parameter: model.layers.6.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.028076
+  Gradient stats - min: -0.012756, max: 0.013062, mean: -0.000223
+--------------------------------------------------------------------------------
+model.layers.6.self_attn.k_norm.weight True
+Parameter: model.layers.6.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.029907
+  Gradient stats - min: -0.003799, max: 0.024780, mean: 0.000041
+--------------------------------------------------------------------------------
+model.layers.6.mlp.gate_proj.weight True
+Parameter: model.layers.6.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.906250
+  Gradient stats - min: -0.371094, max: 0.140625, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.6.mlp.up_proj.weight True
+Parameter: model.layers.6.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.046875
+  Gradient stats - min: -0.322266, max: 0.843750, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.6.mlp.down_proj.weight True
+Parameter: model.layers.6.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 12.250000
+  Gradient stats - min: -1.296875, max: 1.226562, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.6.input_layernorm.weight True
+Parameter: model.layers.6.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.232422
+  Gradient stats - min: -0.003403, max: 0.230469, mean: 0.000235
+--------------------------------------------------------------------------------
+model.layers.6.post_attention_layernorm.weight True
+Parameter: model.layers.6.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.046143
+  Gradient stats - min: -0.014771, max: 0.011902, mean: 0.000123
+--------------------------------------------------------------------------------
+model.layers.6.pre_feedforward_layernorm.weight True
+Parameter: model.layers.6.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.177734
+  Gradient stats - min: -0.165039, max: 0.039307, mean: 0.000139
+--------------------------------------------------------------------------------
+model.layers.6.post_feedforward_layernorm.weight True
+Parameter: model.layers.6.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.075684
+  Gradient stats - min: -0.007111, max: 0.065918, mean: 0.000269
+--------------------------------------------------------------------------------
+model.layers.7.self_attn.q_proj.weight True
+Parameter: model.layers.7.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.562500
+  Gradient stats - min: -0.441406, max: 0.371094, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.7.self_attn.k_proj.weight True
+Parameter: model.layers.7.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.882812
+  Gradient stats - min: -0.462891, max: 0.102539, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.7.self_attn.v_proj.weight True
+Parameter: model.layers.7.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.593750
+  Gradient stats - min: -0.263672, max: 0.392578, mean: -0.000013
+--------------------------------------------------------------------------------
+model.layers.7.self_attn.o_proj.weight True
+Parameter: model.layers.7.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 4.218750
+  Gradient stats - min: -0.408203, max: 0.306641, mean: 0.000010
+--------------------------------------------------------------------------------
+model.layers.7.self_attn.q_norm.weight True
+Parameter: model.layers.7.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.047363
+  Gradient stats - min: -0.003464, max: 0.028564, mean: 0.000444
+--------------------------------------------------------------------------------
+model.layers.7.self_attn.k_norm.weight True
+Parameter: model.layers.7.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.034180
+  Gradient stats - min: -0.006073, max: 0.023560, mean: 0.000224
+--------------------------------------------------------------------------------
+model.layers.7.mlp.gate_proj.weight True
+Parameter: model.layers.7.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.953125
+  Gradient stats - min: -1.226562, max: 0.196289, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.7.mlp.up_proj.weight True
+Parameter: model.layers.7.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.375000
+  Gradient stats - min: -0.233398, max: 0.220703, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.7.mlp.down_proj.weight True
+Parameter: model.layers.7.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 14.562500
+  Gradient stats - min: -1.546875, max: 2.171875, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.7.input_layernorm.weight True
+Parameter: model.layers.7.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.451172
+  Gradient stats - min: -0.013489, max: 0.451172, mean: 0.000431
+--------------------------------------------------------------------------------
+model.layers.7.post_attention_layernorm.weight True
+Parameter: model.layers.7.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.041016
+  Gradient stats - min: -0.012268, max: 0.010681, mean: 0.000065
+--------------------------------------------------------------------------------
+model.layers.7.pre_feedforward_layernorm.weight True
+Parameter: model.layers.7.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.145508
+  Gradient stats - min: -0.092285, max: 0.023071, mean: -0.000079
+--------------------------------------------------------------------------------
+model.layers.7.post_feedforward_layernorm.weight True
+Parameter: model.layers.7.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.023804
+  Gradient stats - min: -0.005585, max: 0.014343, mean: 0.000144
+--------------------------------------------------------------------------------
+model.layers.8.self_attn.q_proj.weight True
+Parameter: model.layers.8.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 0.828125
+  Gradient stats - min: -0.140625, max: 0.131836, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.8.self_attn.k_proj.weight True
+Parameter: model.layers.8.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.515625
+  Gradient stats - min: -0.281250, max: 0.291016, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.8.self_attn.v_proj.weight True
+Parameter: model.layers.8.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.796875
+  Gradient stats - min: -0.523438, max: 0.361328, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.8.self_attn.o_proj.weight True
+Parameter: model.layers.8.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 5.312500
+  Gradient stats - min: -0.396484, max: 0.219727, mean: -0.000048
+--------------------------------------------------------------------------------
+model.layers.8.self_attn.q_norm.weight True
+Parameter: model.layers.8.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.013672
+  Gradient stats - min: -0.004059, max: 0.004883, mean: 0.000303
+--------------------------------------------------------------------------------
+model.layers.8.self_attn.k_norm.weight True
+Parameter: model.layers.8.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.011169
+  Gradient stats - min: -0.006592, max: 0.002594, mean: 0.000154
+--------------------------------------------------------------------------------
+model.layers.8.mlp.gate_proj.weight True
+Parameter: model.layers.8.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.578125
+  Gradient stats - min: -0.318359, max: 0.113281, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.8.mlp.up_proj.weight True
+Parameter: model.layers.8.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.312500
+  Gradient stats - min: -0.365234, max: 0.116211, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.8.mlp.down_proj.weight True
+Parameter: model.layers.8.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 24.375000
+  Gradient stats - min: -2.890625, max: 2.671875, mean: -0.000005
+--------------------------------------------------------------------------------
+model.layers.8.input_layernorm.weight True
+Parameter: model.layers.8.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.198242
+  Gradient stats - min: -0.003799, max: 0.198242, mean: 0.000250
+--------------------------------------------------------------------------------
+model.layers.8.post_attention_layernorm.weight True
+Parameter: model.layers.8.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.032959
+  Gradient stats - min: -0.006622, max: 0.007690, mean: 0.000092
+--------------------------------------------------------------------------------
+model.layers.8.pre_feedforward_layernorm.weight True
+Parameter: model.layers.8.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.095703
+  Gradient stats - min: -0.071777, max: 0.046631, mean: 0.000097
+--------------------------------------------------------------------------------
+model.layers.8.post_feedforward_layernorm.weight True
+Parameter: model.layers.8.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.067871
+  Gradient stats - min: -0.065918, max: 0.004486, mean: 0.000007
+--------------------------------------------------------------------------------
+model.layers.9.self_attn.q_proj.weight True
+Parameter: model.layers.9.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 2.843750
+  Gradient stats - min: -0.644531, max: 0.498047, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.9.self_attn.k_proj.weight True
+Parameter: model.layers.9.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.511719
+  Gradient stats - min: -0.343750, max: 0.134766, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.9.self_attn.v_proj.weight True
+Parameter: model.layers.9.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.835938
+  Gradient stats - min: -0.417969, max: 0.287109, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.9.self_attn.o_proj.weight True
+Parameter: model.layers.9.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 10.750000
+  Gradient stats - min: -0.281250, max: 0.294922, mean: -0.000016
+--------------------------------------------------------------------------------
+model.layers.9.self_attn.q_norm.weight True
+Parameter: model.layers.9.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.012390
+  Gradient stats - min: -0.003326, max: 0.002960, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.9.self_attn.k_norm.weight True
+Parameter: model.layers.9.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.012451
+  Gradient stats - min: -0.004639, max: 0.003464, mean: -0.000046
+--------------------------------------------------------------------------------
+model.layers.9.mlp.gate_proj.weight True
+Parameter: model.layers.9.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.156250
+  Gradient stats - min: -0.546875, max: 0.122559, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.9.mlp.up_proj.weight True
+Parameter: model.layers.9.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.937500
+  Gradient stats - min: -0.328125, max: 0.365234, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.9.mlp.down_proj.weight True
+Parameter: model.layers.9.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 13.500000
+  Gradient stats - min: -1.695312, max: 1.656250, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.9.input_layernorm.weight True
+Parameter: model.layers.9.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.175781
+  Gradient stats - min: -0.007080, max: 0.174805, mean: 0.000122
+--------------------------------------------------------------------------------
+model.layers.9.post_attention_layernorm.weight True
+Parameter: model.layers.9.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.033203
+  Gradient stats - min: -0.008484, max: 0.010681, mean: -0.000041
+--------------------------------------------------------------------------------
+model.layers.9.pre_feedforward_layernorm.weight True
+Parameter: model.layers.9.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.101562
+  Gradient stats - min: -0.026733, max: 0.071777, mean: 0.000383
+--------------------------------------------------------------------------------
+model.layers.9.post_feedforward_layernorm.weight True
+Parameter: model.layers.9.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.024902
+  Gradient stats - min: -0.006165, max: 0.016479, mean: 0.000172
+--------------------------------------------------------------------------------
+model.layers.10.self_attn.q_proj.weight True
+Parameter: model.layers.10.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.242188
+  Gradient stats - min: -0.188477, max: 0.257812, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.10.self_attn.k_proj.weight True
+Parameter: model.layers.10.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.179688
+  Gradient stats - min: -0.114258, max: 0.925781, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.10.self_attn.v_proj.weight True
+Parameter: model.layers.10.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 4.531250
+  Gradient stats - min: -0.542969, max: 0.542969, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.10.self_attn.o_proj.weight True
+Parameter: model.layers.10.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 10.000000
+  Gradient stats - min: -0.484375, max: 0.326172, mean: -0.000061
+--------------------------------------------------------------------------------
+model.layers.10.self_attn.q_norm.weight True
+Parameter: model.layers.10.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.057617
+  Gradient stats - min: -0.039307, max: 0.015869, mean: -0.000319
+--------------------------------------------------------------------------------
+model.layers.10.self_attn.k_norm.weight True
+Parameter: model.layers.10.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.028809
+  Gradient stats - min: -0.009033, max: 0.010742, mean: 0.000064
+--------------------------------------------------------------------------------
+model.layers.10.mlp.gate_proj.weight True
+Parameter: model.layers.10.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.156250
+  Gradient stats - min: -0.164062, max: 0.246094, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.10.mlp.up_proj.weight True
+Parameter: model.layers.10.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.687500
+  Gradient stats - min: -0.515625, max: 0.369141, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.10.mlp.down_proj.weight True
+Parameter: model.layers.10.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 22.125000
+  Gradient stats - min: -5.093750, max: 10.500000, mean: -0.000005
+--------------------------------------------------------------------------------
+model.layers.10.input_layernorm.weight True
+Parameter: model.layers.10.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.398438
+  Gradient stats - min: -0.016602, max: 0.398438, mean: 0.000355
+--------------------------------------------------------------------------------
+model.layers.10.post_attention_layernorm.weight True
+Parameter: model.layers.10.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.031128
+  Gradient stats - min: -0.007019, max: 0.006500, mean: -0.000036
+--------------------------------------------------------------------------------
+model.layers.10.pre_feedforward_layernorm.weight True
+Parameter: model.layers.10.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.112793
+  Gradient stats - min: -0.052734, max: 0.045166, mean: 0.000188
+--------------------------------------------------------------------------------
+model.layers.10.post_feedforward_layernorm.weight True
+Parameter: model.layers.10.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.013550
+  Gradient stats - min: -0.001953, max: 0.005371, mean: 0.000089
+--------------------------------------------------------------------------------
+model.layers.11.self_attn.q_proj.weight True
+Parameter: model.layers.11.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 3.078125
+  Gradient stats - min: -0.498047, max: 0.648438, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.11.self_attn.k_proj.weight True
+Parameter: model.layers.11.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.640625
+  Gradient stats - min: -0.566406, max: 1.593750, mean: 0.000018
+--------------------------------------------------------------------------------
+model.layers.11.self_attn.v_proj.weight True
+Parameter: model.layers.11.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 7.343750
+  Gradient stats - min: -1.171875, max: 1.210938, mean: 0.000018
+--------------------------------------------------------------------------------
+model.layers.11.self_attn.o_proj.weight True
+Parameter: model.layers.11.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 10.875000
+  Gradient stats - min: -0.789062, max: 1.187500, mean: 0.000025
+--------------------------------------------------------------------------------
+model.layers.11.self_attn.q_norm.weight True
+Parameter: model.layers.11.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.062988
+  Gradient stats - min: -0.044189, max: 0.022583, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.11.self_attn.k_norm.weight True
+Parameter: model.layers.11.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.085449
+  Gradient stats - min: -0.080078, max: 0.009460, mean: -0.000261
+--------------------------------------------------------------------------------
+model.layers.11.mlp.gate_proj.weight True
+Parameter: model.layers.11.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.046875
+  Gradient stats - min: -0.324219, max: 0.267578, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.11.mlp.up_proj.weight True
+Parameter: model.layers.11.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.078125
+  Gradient stats - min: -0.414062, max: 0.294922, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.11.mlp.down_proj.weight True
+Parameter: model.layers.11.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 17.750000
+  Gradient stats - min: -3.468750, max: 3.750000, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.11.input_layernorm.weight True
+Parameter: model.layers.11.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 4.343750
+  Gradient stats - min: -4.343750, max: 0.015747, mean: -0.003525
+--------------------------------------------------------------------------------
+model.layers.11.post_attention_layernorm.weight True
+Parameter: model.layers.11.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.032959
+  Gradient stats - min: -0.008728, max: 0.007751, mean: 0.000061
+--------------------------------------------------------------------------------
+model.layers.11.pre_feedforward_layernorm.weight True
+Parameter: model.layers.11.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.076660
+  Gradient stats - min: -0.013977, max: 0.053467, mean: 0.000307
+--------------------------------------------------------------------------------
+model.layers.11.post_feedforward_layernorm.weight True
+Parameter: model.layers.11.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.011475
+  Gradient stats - min: -0.004517, max: 0.004639, mean: 0.000071
+--------------------------------------------------------------------------------
+model.layers.12.self_attn.q_proj.weight True
+Parameter: model.layers.12.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 3.984375
+  Gradient stats - min: -1.250000, max: 1.023438, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.12.self_attn.k_proj.weight True
+Parameter: model.layers.12.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.777344
+  Gradient stats - min: -0.402344, max: 0.333984, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.12.self_attn.v_proj.weight True
+Parameter: model.layers.12.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.234375
+  Gradient stats - min: -0.322266, max: 0.363281, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.12.self_attn.o_proj.weight True
+Parameter: model.layers.12.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 7.812500
+  Gradient stats - min: -0.435547, max: 0.687500, mean: 0.000019
+--------------------------------------------------------------------------------
+model.layers.12.self_attn.q_norm.weight True
+Parameter: model.layers.12.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.039795
+  Gradient stats - min: -0.008789, max: 0.027222, mean: 0.000032
+--------------------------------------------------------------------------------
+model.layers.12.self_attn.k_norm.weight True
+Parameter: model.layers.12.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.030029
+  Gradient stats - min: -0.004852, max: 0.021240, mean: 0.000150
+--------------------------------------------------------------------------------
+model.layers.12.mlp.gate_proj.weight True
+Parameter: model.layers.12.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.484375
+  Gradient stats - min: -0.175781, max: 0.089844, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.12.mlp.up_proj.weight True
+Parameter: model.layers.12.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.750000
+  Gradient stats - min: -0.478516, max: 0.349609, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.12.mlp.down_proj.weight True
+Parameter: model.layers.12.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 26.500000
+  Gradient stats - min: -6.218750, max: 5.093750, mean: 0.000007
+--------------------------------------------------------------------------------
+model.layers.12.input_layernorm.weight True
+Parameter: model.layers.12.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.357422
+  Gradient stats - min: -0.002121, max: 0.357422, mean: 0.000322
+--------------------------------------------------------------------------------
+model.layers.12.post_attention_layernorm.weight True
+Parameter: model.layers.12.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.024658
+  Gradient stats - min: -0.009155, max: 0.007507, mean: -0.000018
+--------------------------------------------------------------------------------
+model.layers.12.pre_feedforward_layernorm.weight True
+Parameter: model.layers.12.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.149414
+  Gradient stats - min: -0.016113, max: 0.137695, mean: 0.000477
+--------------------------------------------------------------------------------
+model.layers.12.post_feedforward_layernorm.weight True
+Parameter: model.layers.12.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.028809
+  Gradient stats - min: -0.001266, max: 0.027222, mean: 0.000100
+--------------------------------------------------------------------------------
+model.layers.13.self_attn.q_proj.weight True
+Parameter: model.layers.13.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.445312
+  Gradient stats - min: -0.237305, max: 0.281250, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.13.self_attn.k_proj.weight True
+Parameter: model.layers.13.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.171875
+  Gradient stats - min: -0.757812, max: 0.566406, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.13.self_attn.v_proj.weight True
+Parameter: model.layers.13.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.843750
+  Gradient stats - min: -0.376953, max: 0.462891, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.13.self_attn.o_proj.weight True
+Parameter: model.layers.13.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 7.625000
+  Gradient stats - min: -0.707031, max: 0.365234, mean: 0.000005
+--------------------------------------------------------------------------------
+model.layers.13.self_attn.q_norm.weight True
+Parameter: model.layers.13.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.024414
+  Gradient stats - min: -0.015137, max: 0.005585, mean: 0.000252
+--------------------------------------------------------------------------------
+model.layers.13.self_attn.k_norm.weight True
+Parameter: model.layers.13.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.039062
+  Gradient stats - min: -0.031982, max: 0.011475, mean: 0.000088
+--------------------------------------------------------------------------------
+model.layers.13.mlp.gate_proj.weight True
+Parameter: model.layers.13.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.625000
+  Gradient stats - min: -0.302734, max: 0.195312, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.13.mlp.up_proj.weight True
+Parameter: model.layers.13.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.203125
+  Gradient stats - min: -0.539062, max: 0.664062, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.13.mlp.down_proj.weight True
+Parameter: model.layers.13.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 24.625000
+  Gradient stats - min: -4.281250, max: 3.203125, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.13.input_layernorm.weight True
+Parameter: model.layers.13.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.223633
+  Gradient stats - min: -0.222656, max: 0.014282, mean: -0.000066
+--------------------------------------------------------------------------------
+model.layers.13.post_attention_layernorm.weight True
+Parameter: model.layers.13.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.026733
+  Gradient stats - min: -0.008118, max: 0.006531, mean: 0.000089
+--------------------------------------------------------------------------------
+model.layers.13.pre_feedforward_layernorm.weight True
+Parameter: model.layers.13.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.100098
+  Gradient stats - min: -0.007141, max: 0.074707, mean: 0.000511
+--------------------------------------------------------------------------------
+model.layers.13.post_feedforward_layernorm.weight True
+Parameter: model.layers.13.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.018555
+  Gradient stats - min: -0.009705, max: 0.008362, mean: 0.000044
+--------------------------------------------------------------------------------
+model.layers.14.self_attn.q_proj.weight True
+Parameter: model.layers.14.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 2.953125
+  Gradient stats - min: -0.664062, max: 0.785156, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.14.self_attn.k_proj.weight True
+Parameter: model.layers.14.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.648438
+  Gradient stats - min: -0.468750, max: 0.131836, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.14.self_attn.v_proj.weight True
+Parameter: model.layers.14.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.093750
+  Gradient stats - min: -0.375000, max: 0.484375, mean: 0.000007
+--------------------------------------------------------------------------------
+model.layers.14.self_attn.o_proj.weight True
+Parameter: model.layers.14.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 6.781250
+  Gradient stats - min: -0.531250, max: 0.427734, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.14.self_attn.q_norm.weight True
+Parameter: model.layers.14.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.013123
+  Gradient stats - min: -0.003326, max: 0.007263, mean: 0.000132
+--------------------------------------------------------------------------------
+model.layers.14.self_attn.k_norm.weight True
+Parameter: model.layers.14.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.010559
+  Gradient stats - min: -0.001984, max: 0.004761, mean: 0.000141
+--------------------------------------------------------------------------------
+model.layers.14.mlp.gate_proj.weight True
+Parameter: model.layers.14.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.429688
+  Gradient stats - min: -0.175781, max: 0.098145, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.14.mlp.up_proj.weight True
+Parameter: model.layers.14.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.593750
+  Gradient stats - min: -0.302734, max: 0.550781, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.14.mlp.down_proj.weight True
+Parameter: model.layers.14.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 26.625000
+  Gradient stats - min: -4.906250, max: 3.406250, mean: 0.000004
+--------------------------------------------------------------------------------
+model.layers.14.input_layernorm.weight True
+Parameter: model.layers.14.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.104980
+  Gradient stats - min: -0.002243, max: 0.104980, mean: 0.000114
+--------------------------------------------------------------------------------
+model.layers.14.post_attention_layernorm.weight True
+Parameter: model.layers.14.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.029663
+  Gradient stats - min: -0.012756, max: 0.012878, mean: -0.000012
+--------------------------------------------------------------------------------
+model.layers.14.pre_feedforward_layernorm.weight True
+Parameter: model.layers.14.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.095215
+  Gradient stats - min: -0.004425, max: 0.073242, mean: 0.000446
+--------------------------------------------------------------------------------
+model.layers.14.post_feedforward_layernorm.weight True
+Parameter: model.layers.14.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.009521
+  Gradient stats - min: -0.005096, max: 0.003067, mean: 0.000034
+--------------------------------------------------------------------------------
+model.layers.15.self_attn.q_proj.weight True
+Parameter: model.layers.15.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 4.500000
+  Gradient stats - min: -0.742188, max: 0.710938, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.15.self_attn.k_proj.weight True
+Parameter: model.layers.15.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.375000
+  Gradient stats - min: -0.511719, max: 0.710938, mean: 0.000018
+--------------------------------------------------------------------------------
+model.layers.15.self_attn.v_proj.weight True
+Parameter: model.layers.15.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 4.750000
+  Gradient stats - min: -0.667969, max: 0.777344, mean: -0.000005
+--------------------------------------------------------------------------------
+model.layers.15.self_attn.o_proj.weight True
+Parameter: model.layers.15.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 12.375000
+  Gradient stats - min: -1.148438, max: 1.242188, mean: -0.000009
+--------------------------------------------------------------------------------
+model.layers.15.self_attn.q_norm.weight True
+Parameter: model.layers.15.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.042480
+  Gradient stats - min: -0.009583, max: 0.018311, mean: -0.000143
+--------------------------------------------------------------------------------
+model.layers.15.self_attn.k_norm.weight True
+Parameter: model.layers.15.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.028198
+  Gradient stats - min: -0.008362, max: 0.010864, mean: -0.000075
+--------------------------------------------------------------------------------
+model.layers.15.mlp.gate_proj.weight True
+Parameter: model.layers.15.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.187500
+  Gradient stats - min: -0.279297, max: 0.170898, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.15.mlp.up_proj.weight True
+Parameter: model.layers.15.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.812500
+  Gradient stats - min: -0.824219, max: 0.441406, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.15.mlp.down_proj.weight True
+Parameter: model.layers.15.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 19.250000
+  Gradient stats - min: -2.828125, max: 3.796875, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.15.input_layernorm.weight True
+Parameter: model.layers.15.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.628906
+  Gradient stats - min: -0.006104, max: 0.628906, mean: 0.000603
+--------------------------------------------------------------------------------
+model.layers.15.post_attention_layernorm.weight True
+Parameter: model.layers.15.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.032715
+  Gradient stats - min: -0.014282, max: 0.011475, mean: 0.000020
+--------------------------------------------------------------------------------
+model.layers.15.pre_feedforward_layernorm.weight True
+Parameter: model.layers.15.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.137695
+  Gradient stats - min: -0.032227, max: 0.074707, mean: 0.000538
+--------------------------------------------------------------------------------
+model.layers.15.post_feedforward_layernorm.weight True
+Parameter: model.layers.15.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.010071
+  Gradient stats - min: -0.001892, max: 0.005219, mean: 0.000044
+--------------------------------------------------------------------------------
+model.layers.16.self_attn.q_proj.weight True
+Parameter: model.layers.16.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 6.812500
+  Gradient stats - min: -2.078125, max: 1.929688, mean: 0.000004
+--------------------------------------------------------------------------------
+model.layers.16.self_attn.k_proj.weight True
+Parameter: model.layers.16.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 4.343750
+  Gradient stats - min: -3.281250, max: 0.855469, mean: -0.000020
+--------------------------------------------------------------------------------
+model.layers.16.self_attn.v_proj.weight True
+Parameter: model.layers.16.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 3.781250
+  Gradient stats - min: -0.466797, max: 0.445312, mean: -0.000005
+--------------------------------------------------------------------------------
+model.layers.16.self_attn.o_proj.weight True
+Parameter: model.layers.16.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 10.875000
+  Gradient stats - min: -0.691406, max: 0.824219, mean: -0.000017
+--------------------------------------------------------------------------------
+model.layers.16.self_attn.q_norm.weight True
+Parameter: model.layers.16.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.151367
+  Gradient stats - min: -0.065918, max: 0.058105, mean: -0.001686
+--------------------------------------------------------------------------------
+model.layers.16.self_attn.k_norm.weight True
+Parameter: model.layers.16.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.125000
+  Gradient stats - min: -0.022705, max: 0.086426, mean: -0.000387
+--------------------------------------------------------------------------------
+model.layers.16.mlp.gate_proj.weight True
+Parameter: model.layers.16.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.359375
+  Gradient stats - min: -1.023438, max: 0.304688, mean: -0.000005
+--------------------------------------------------------------------------------
+model.layers.16.mlp.up_proj.weight True
+Parameter: model.layers.16.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.984375
+  Gradient stats - min: -0.458984, max: 0.396484, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.16.mlp.down_proj.weight True
+Parameter: model.layers.16.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 23.500000
+  Gradient stats - min: -5.031250, max: 5.687500, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.16.input_layernorm.weight True
+Parameter: model.layers.16.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.400391
+  Gradient stats - min: -0.007751, max: 0.400391, mean: 0.000288
+--------------------------------------------------------------------------------
+model.layers.16.post_attention_layernorm.weight True
+Parameter: model.layers.16.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.026367
+  Gradient stats - min: -0.006042, max: 0.015320, mean: -0.000008
+--------------------------------------------------------------------------------
+model.layers.16.pre_feedforward_layernorm.weight True
+Parameter: model.layers.16.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.125000
+  Gradient stats - min: -0.008423, max: 0.061035, mean: 0.001480
+--------------------------------------------------------------------------------
+model.layers.16.post_feedforward_layernorm.weight True
+Parameter: model.layers.16.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.015564
+  Gradient stats - min: -0.002899, max: 0.009583, mean: 0.000082
+--------------------------------------------------------------------------------
+model.layers.17.self_attn.q_proj.weight True
+Parameter: model.layers.17.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 4.593750
+  Gradient stats - min: -1.000000, max: 0.667969, mean: 0.000013
+--------------------------------------------------------------------------------
+model.layers.17.self_attn.k_proj.weight True
+Parameter: model.layers.17.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 5.625000
+  Gradient stats - min: -1.335938, max: 1.156250, mean: -0.000039
+--------------------------------------------------------------------------------
+model.layers.17.self_attn.v_proj.weight True
+Parameter: model.layers.17.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 3.453125
+  Gradient stats - min: -0.539062, max: 0.390625, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.17.self_attn.o_proj.weight True
+Parameter: model.layers.17.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 7.875000
+  Gradient stats - min: -0.578125, max: 0.523438, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.17.self_attn.q_norm.weight True
+Parameter: model.layers.17.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.166016
+  Gradient stats - min: -0.120117, max: 0.020630, mean: 0.000378
+--------------------------------------------------------------------------------
+model.layers.17.self_attn.k_norm.weight True
+Parameter: model.layers.17.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.116699
+  Gradient stats - min: -0.089844, max: 0.019897, mean: 0.000328
+--------------------------------------------------------------------------------
+model.layers.17.mlp.gate_proj.weight True
+Parameter: model.layers.17.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.078125
+  Gradient stats - min: -0.351562, max: 0.310547, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.17.mlp.up_proj.weight True
+Parameter: model.layers.17.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.406250
+  Gradient stats - min: -0.519531, max: 0.613281, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.17.mlp.down_proj.weight True
+Parameter: model.layers.17.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 23.250000
+  Gradient stats - min: -4.656250, max: 4.468750, mean: 0.000005
+--------------------------------------------------------------------------------
+model.layers.17.input_layernorm.weight True
+Parameter: model.layers.17.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 2.890625
+  Gradient stats - min: -2.890625, max: 0.021484, mean: -0.002136
+--------------------------------------------------------------------------------
+model.layers.17.post_attention_layernorm.weight True
+Parameter: model.layers.17.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.013245
+  Gradient stats - min: -0.008240, max: 0.003860, mean: 0.000025
+--------------------------------------------------------------------------------
+model.layers.17.pre_feedforward_layernorm.weight True
+Parameter: model.layers.17.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.104004
+  Gradient stats - min: -0.007294, max: 0.072266, mean: 0.001045
+--------------------------------------------------------------------------------
+model.layers.17.post_feedforward_layernorm.weight True
+Parameter: model.layers.17.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.008545
+  Gradient stats - min: -0.001648, max: 0.005127, mean: 0.000051
+--------------------------------------------------------------------------------
+model.layers.18.self_attn.q_proj.weight True
+Parameter: model.layers.18.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 2.875000
+  Gradient stats - min: -0.433594, max: 0.828125, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.18.self_attn.k_proj.weight True
+Parameter: model.layers.18.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.703125
+  Gradient stats - min: -0.535156, max: 0.084473, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.18.self_attn.v_proj.weight True
+Parameter: model.layers.18.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.015625
+  Gradient stats - min: -0.253906, max: 0.179688, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.18.self_attn.o_proj.weight True
+Parameter: model.layers.18.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 6.968750
+  Gradient stats - min: -0.369141, max: 0.265625, mean: 0.000005
+--------------------------------------------------------------------------------
+model.layers.18.self_attn.q_norm.weight True
+Parameter: model.layers.18.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.014465
+  Gradient stats - min: -0.002274, max: 0.010132, mean: 0.000125
+--------------------------------------------------------------------------------
+model.layers.18.self_attn.k_norm.weight True
+Parameter: model.layers.18.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.020630
+  Gradient stats - min: -0.003464, max: 0.014587, mean: 0.000179
+--------------------------------------------------------------------------------
+model.layers.18.mlp.gate_proj.weight True
+Parameter: model.layers.18.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.617188
+  Gradient stats - min: -0.147461, max: 0.197266, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.18.mlp.up_proj.weight True
+Parameter: model.layers.18.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.671875
+  Gradient stats - min: -0.373047, max: 0.464844, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.18.mlp.down_proj.weight True
+Parameter: model.layers.18.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 27.625000
+  Gradient stats - min: -4.875000, max: 3.515625, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.18.input_layernorm.weight True
+Parameter: model.layers.18.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.115234
+  Gradient stats - min: -0.001389, max: 0.114746, mean: 0.000105
+--------------------------------------------------------------------------------
+model.layers.18.post_attention_layernorm.weight True
+Parameter: model.layers.18.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.051514
+  Gradient stats - min: -0.050537, max: 0.006805, mean: -0.000040
+--------------------------------------------------------------------------------
+model.layers.18.pre_feedforward_layernorm.weight True
+Parameter: model.layers.18.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.082031
+  Gradient stats - min: -0.050049, max: 0.013000, mean: 0.000828
+--------------------------------------------------------------------------------
+model.layers.18.post_feedforward_layernorm.weight True
+Parameter: model.layers.18.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.007172
+  Gradient stats - min: -0.004272, max: 0.002838, mean: 0.000030
+--------------------------------------------------------------------------------
+model.layers.19.self_attn.q_proj.weight True
+Parameter: model.layers.19.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 2.687500
+  Gradient stats - min: -0.535156, max: 0.357422, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.19.self_attn.k_proj.weight True
+Parameter: model.layers.19.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 9.375000
+  Gradient stats - min: -0.408203, max: 9.062500, mean: 0.000040
+--------------------------------------------------------------------------------
+model.layers.19.self_attn.v_proj.weight True
+Parameter: model.layers.19.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 5.031250
+  Gradient stats - min: -1.453125, max: 1.281250, mean: 0.000033
+--------------------------------------------------------------------------------
+model.layers.19.self_attn.o_proj.weight True
+Parameter: model.layers.19.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 4.031250
+  Gradient stats - min: -0.371094, max: 0.300781, mean: -0.000006
+--------------------------------------------------------------------------------
+model.layers.19.self_attn.q_norm.weight True
+Parameter: model.layers.19.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.063965
+  Gradient stats - min: -0.052979, max: 0.010010, mean: -0.000370
+--------------------------------------------------------------------------------
+model.layers.19.self_attn.k_norm.weight True
+Parameter: model.layers.19.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.061035
+  Gradient stats - min: -0.027832, max: 0.033691, mean: -0.000049
+--------------------------------------------------------------------------------
+model.layers.19.mlp.gate_proj.weight True
+Parameter: model.layers.19.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.468750
+  Gradient stats - min: -0.106445, max: 0.073730, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.19.mlp.up_proj.weight True
+Parameter: model.layers.19.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.992188
+  Gradient stats - min: -0.275391, max: 0.156250, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.19.mlp.down_proj.weight True
+Parameter: model.layers.19.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 24.750000
+  Gradient stats - min: -4.062500, max: 4.218750, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.19.input_layernorm.weight True
+Parameter: model.layers.19.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.102539
+  Gradient stats - min: -0.001724, max: 0.102051, mean: 0.000092
+--------------------------------------------------------------------------------
+model.layers.19.post_attention_layernorm.weight True
+Parameter: model.layers.19.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.012817
+  Gradient stats - min: -0.005280, max: 0.007172, mean: 0.000032
+--------------------------------------------------------------------------------
+model.layers.19.pre_feedforward_layernorm.weight True
+Parameter: model.layers.19.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.075684
+  Gradient stats - min: -0.005127, max: 0.051270, mean: 0.000774
+--------------------------------------------------------------------------------
+model.layers.19.post_feedforward_layernorm.weight True
+Parameter: model.layers.19.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.006439
+  Gradient stats - min: -0.001717, max: 0.003754, mean: 0.000031
+--------------------------------------------------------------------------------
+model.layers.20.self_attn.q_proj.weight True
+Parameter: model.layers.20.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 2.937500
+  Gradient stats - min: -0.761719, max: 0.906250, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.20.self_attn.k_proj.weight True
+Parameter: model.layers.20.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.242188
+  Gradient stats - min: -0.718750, max: 0.378906, mean: 0.000004
+--------------------------------------------------------------------------------
+model.layers.20.self_attn.v_proj.weight True
+Parameter: model.layers.20.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.562500
+  Gradient stats - min: -0.259766, max: 0.300781, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.20.self_attn.o_proj.weight True
+Parameter: model.layers.20.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 5.937500
+  Gradient stats - min: -0.205078, max: 0.174805, mean: -0.000008
+--------------------------------------------------------------------------------
+model.layers.20.self_attn.q_norm.weight True
+Parameter: model.layers.20.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.035400
+  Gradient stats - min: -0.006439, max: 0.020386, mean: -0.000013
+--------------------------------------------------------------------------------
+model.layers.20.self_attn.k_norm.weight True
+Parameter: model.layers.20.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.033691
+  Gradient stats - min: -0.003677, max: 0.021973, mean: -0.000036
+--------------------------------------------------------------------------------
+model.layers.20.mlp.gate_proj.weight True
+Parameter: model.layers.20.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.546875
+  Gradient stats - min: -0.089355, max: 0.119629, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.20.mlp.up_proj.weight True
+Parameter: model.layers.20.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.234375
+  Gradient stats - min: -0.308594, max: 0.343750, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.20.mlp.down_proj.weight True
+Parameter: model.layers.20.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 16.250000
+  Gradient stats - min: -2.984375, max: 3.078125, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.20.input_layernorm.weight True
+Parameter: model.layers.20.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.150391
+  Gradient stats - min: -0.000881, max: 0.150391, mean: 0.000156
+--------------------------------------------------------------------------------
+model.layers.20.post_attention_layernorm.weight True
+Parameter: model.layers.20.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.035645
+  Gradient stats - min: -0.032959, max: 0.003845, mean: -0.000010
+--------------------------------------------------------------------------------
+model.layers.20.pre_feedforward_layernorm.weight True
+Parameter: model.layers.20.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.072266
+  Gradient stats - min: -0.008545, max: 0.047852, mean: 0.000736
+--------------------------------------------------------------------------------
+model.layers.20.post_feedforward_layernorm.weight True
+Parameter: model.layers.20.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.005249
+  Gradient stats - min: -0.001518, max: 0.002350, mean: 0.000024
+--------------------------------------------------------------------------------
+model.layers.21.self_attn.q_proj.weight True
+Parameter: model.layers.21.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.250000
+  Gradient stats - min: -0.240234, max: 0.164062, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.21.self_attn.k_proj.weight True
+Parameter: model.layers.21.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.007812
+  Gradient stats - min: -0.122559, max: 0.851562, mean: 0.000004
+--------------------------------------------------------------------------------
+model.layers.21.self_attn.v_proj.weight True
+Parameter: model.layers.21.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.453125
+  Gradient stats - min: -0.585938, max: 0.589844, mean: -0.000006
+--------------------------------------------------------------------------------
+model.layers.21.self_attn.o_proj.weight True
+Parameter: model.layers.21.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 3.296875
+  Gradient stats - min: -0.202148, max: 0.263672, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.21.self_attn.q_norm.weight True
+Parameter: model.layers.21.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.030762
+  Gradient stats - min: -0.014709, max: 0.013611, mean: 0.000113
+--------------------------------------------------------------------------------
+model.layers.21.self_attn.k_norm.weight True
+Parameter: model.layers.21.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.029541
+  Gradient stats - min: -0.013367, max: 0.004242, mean: -0.000011
+--------------------------------------------------------------------------------
+model.layers.21.mlp.gate_proj.weight True
+Parameter: model.layers.21.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.406250
+  Gradient stats - min: -0.130859, max: 0.115234, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.21.mlp.up_proj.weight True
+Parameter: model.layers.21.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.781250
+  Gradient stats - min: -0.172852, max: 0.232422, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.21.mlp.down_proj.weight True
+Parameter: model.layers.21.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 22.875000
+  Gradient stats - min: -4.000000, max: 3.515625, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.21.input_layernorm.weight True
+Parameter: model.layers.21.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.106934
+  Gradient stats - min: -0.002502, max: 0.106445, mean: 0.000126
+--------------------------------------------------------------------------------
+model.layers.21.post_attention_layernorm.weight True
+Parameter: model.layers.21.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.007111
+  Gradient stats - min: -0.002121, max: 0.003464, mean: 0.000029
+--------------------------------------------------------------------------------
+model.layers.21.pre_feedforward_layernorm.weight True
+Parameter: model.layers.21.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.076172
+  Gradient stats - min: -0.048096, max: 0.006958, mean: 0.000404
+--------------------------------------------------------------------------------
+model.layers.21.post_feedforward_layernorm.weight True
+Parameter: model.layers.21.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.018188
+  Gradient stats - min: -0.002365, max: 0.017456, mean: 0.000027
+--------------------------------------------------------------------------------
+model.layers.22.self_attn.q_proj.weight True
+Parameter: model.layers.22.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 1.890625
+  Gradient stats - min: -0.683594, max: 0.157227, mean: -0.000002
+--------------------------------------------------------------------------------
+model.layers.22.self_attn.k_proj.weight True
+Parameter: model.layers.22.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.882812
+  Gradient stats - min: -0.632812, max: 1.593750, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.22.self_attn.v_proj.weight True
+Parameter: model.layers.22.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.375000
+  Gradient stats - min: -0.625000, max: 0.667969, mean: 0.000003
+--------------------------------------------------------------------------------
+model.layers.22.self_attn.o_proj.weight True
+Parameter: model.layers.22.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 3.953125
+  Gradient stats - min: -0.423828, max: 0.566406, mean: 0.000001
+--------------------------------------------------------------------------------
+model.layers.22.self_attn.q_norm.weight True
+Parameter: model.layers.22.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.051514
+  Gradient stats - min: -0.036621, max: 0.009277, mean: 0.000024
+--------------------------------------------------------------------------------
+model.layers.22.self_attn.k_norm.weight True
+Parameter: model.layers.22.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.049072
+  Gradient stats - min: -0.030884, max: 0.025879, mean: 0.000290
+--------------------------------------------------------------------------------
+model.layers.22.mlp.gate_proj.weight True
+Parameter: model.layers.22.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.656250
+  Gradient stats - min: -0.198242, max: 0.235352, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.22.mlp.up_proj.weight True
+Parameter: model.layers.22.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.421875
+  Gradient stats - min: -0.515625, max: 0.396484, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.22.mlp.down_proj.weight True
+Parameter: model.layers.22.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 23.250000
+  Gradient stats - min: -4.531250, max: 5.718750, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.22.input_layernorm.weight True
+Parameter: model.layers.22.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.139648
+  Gradient stats - min: -0.001389, max: 0.139648, mean: 0.000193
+--------------------------------------------------------------------------------
+model.layers.22.post_attention_layernorm.weight True
+Parameter: model.layers.22.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.008423
+  Gradient stats - min: -0.001427, max: 0.003220, mean: 0.000042
+--------------------------------------------------------------------------------
+model.layers.22.pre_feedforward_layernorm.weight True
+Parameter: model.layers.22.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.090820
+  Gradient stats - min: -0.058838, max: 0.018188, mean: 0.000234
+--------------------------------------------------------------------------------
+model.layers.22.post_feedforward_layernorm.weight True
+Parameter: model.layers.22.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.006134
+  Gradient stats - min: -0.002029, max: 0.004028, mean: 0.000012
+--------------------------------------------------------------------------------
+model.layers.23.self_attn.q_proj.weight True
+Parameter: model.layers.23.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 2.875000
+  Gradient stats - min: -0.777344, max: 0.796875, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.23.self_attn.k_proj.weight True
+Parameter: model.layers.23.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.302734
+  Gradient stats - min: -0.068359, max: 0.158203, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.23.self_attn.v_proj.weight True
+Parameter: model.layers.23.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 2.843750
+  Gradient stats - min: -0.447266, max: 0.652344, mean: 0.000008
+--------------------------------------------------------------------------------
+model.layers.23.self_attn.o_proj.weight True
+Parameter: model.layers.23.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 4.218750
+  Gradient stats - min: -0.484375, max: 0.453125, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.23.self_attn.q_norm.weight True
+Parameter: model.layers.23.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.010071
+  Gradient stats - min: -0.002197, max: 0.003937, mean: -0.000053
+--------------------------------------------------------------------------------
+model.layers.23.self_attn.k_norm.weight True
+Parameter: model.layers.23.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.013672
+  Gradient stats - min: -0.009705, max: 0.004517, mean: -0.000050
+--------------------------------------------------------------------------------
+model.layers.23.mlp.gate_proj.weight True
+Parameter: model.layers.23.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.382812
+  Gradient stats - min: -0.090332, max: 0.115723, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.23.mlp.up_proj.weight True
+Parameter: model.layers.23.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 2.234375
+  Gradient stats - min: -0.275391, max: 0.550781, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.23.mlp.down_proj.weight True
+Parameter: model.layers.23.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 21.750000
+  Gradient stats - min: -6.562500, max: 5.000000, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.23.input_layernorm.weight True
+Parameter: model.layers.23.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.057617
+  Gradient stats - min: -0.001678, max: 0.056641, mean: 0.000052
+--------------------------------------------------------------------------------
+model.layers.23.post_attention_layernorm.weight True
+Parameter: model.layers.23.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.010559
+  Gradient stats - min: -0.004517, max: 0.007172, mean: 0.000012
+--------------------------------------------------------------------------------
+model.layers.23.pre_feedforward_layernorm.weight True
+Parameter: model.layers.23.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.082520
+  Gradient stats - min: -0.026367, max: 0.010498, mean: 0.000146
+--------------------------------------------------------------------------------
+model.layers.23.post_feedforward_layernorm.weight True
+Parameter: model.layers.23.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.005249
+  Gradient stats - min: -0.001183, max: 0.002563, mean: 0.000006
+--------------------------------------------------------------------------------
+model.layers.24.self_attn.q_proj.weight True
+Parameter: model.layers.24.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 3.500000
+  Gradient stats - min: -0.976562, max: 0.800781, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.24.self_attn.k_proj.weight True
+Parameter: model.layers.24.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 1.101562
+  Gradient stats - min: -0.519531, max: 0.353516, mean: -0.000006
+--------------------------------------------------------------------------------
+model.layers.24.self_attn.v_proj.weight True
+Parameter: model.layers.24.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 4.312500
+  Gradient stats - min: -1.101562, max: 1.351562, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.24.self_attn.o_proj.weight True
+Parameter: model.layers.24.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 6.906250
+  Gradient stats - min: -0.625000, max: 0.570312, mean: -0.000003
+--------------------------------------------------------------------------------
+model.layers.24.self_attn.q_norm.weight True
+Parameter: model.layers.24.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.042725
+  Gradient stats - min: -0.019531, max: 0.018311, mean: -0.000021
+--------------------------------------------------------------------------------
+model.layers.24.self_attn.k_norm.weight True
+Parameter: model.layers.24.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.030029
+  Gradient stats - min: -0.007935, max: 0.014893, mean: -0.000176
+--------------------------------------------------------------------------------
+model.layers.24.mlp.gate_proj.weight True
+Parameter: model.layers.24.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 1.960938
+  Gradient stats - min: -0.273438, max: 0.175781, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.24.mlp.up_proj.weight True
+Parameter: model.layers.24.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.250000
+  Gradient stats - min: -1.156250, max: 0.636719, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.24.mlp.down_proj.weight True
+Parameter: model.layers.24.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 28.750000
+  Gradient stats - min: -3.968750, max: 5.968750, mean: 0.000005
+--------------------------------------------------------------------------------
+model.layers.24.input_layernorm.weight True
+Parameter: model.layers.24.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.292969
+  Gradient stats - min: -0.001495, max: 0.292969, mean: 0.000256
+--------------------------------------------------------------------------------
+model.layers.24.post_attention_layernorm.weight True
+Parameter: model.layers.24.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.009521
+  Gradient stats - min: -0.003586, max: 0.003799, mean: 0.000027
+--------------------------------------------------------------------------------
+model.layers.24.pre_feedforward_layernorm.weight True
+Parameter: model.layers.24.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.192383
+  Gradient stats - min: -0.161133, max: 0.014099, mean: -0.000439
+--------------------------------------------------------------------------------
+model.layers.24.post_feedforward_layernorm.weight True
+Parameter: model.layers.24.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.004608
+  Gradient stats - min: -0.002396, max: 0.001137, mean: -0.000004
+--------------------------------------------------------------------------------
+model.layers.25.self_attn.q_proj.weight True
+Parameter: model.layers.25.self_attn.q_proj.weight
+  Gradient shape: torch.Size([1024, 1152])
+  Gradient norm: 0.589844
+  Gradient stats - min: -0.079590, max: 0.058105, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.25.self_attn.k_proj.weight True
+Parameter: model.layers.25.self_attn.k_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 0.691406
+  Gradient stats - min: -0.115234, max: 0.115723, mean: 0.000002
+--------------------------------------------------------------------------------
+model.layers.25.self_attn.v_proj.weight True
+Parameter: model.layers.25.self_attn.v_proj.weight
+  Gradient shape: torch.Size([256, 1152])
+  Gradient norm: 3.671875
+  Gradient stats - min: -0.511719, max: 0.589844, mean: 0.000004
+--------------------------------------------------------------------------------
+model.layers.25.self_attn.o_proj.weight True
+Parameter: model.layers.25.self_attn.o_proj.weight
+  Gradient shape: torch.Size([1152, 1024])
+  Gradient norm: 6.500000
+  Gradient stats - min: -0.710938, max: 0.609375, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.25.self_attn.q_norm.weight True
+Parameter: model.layers.25.self_attn.q_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.021973
+  Gradient stats - min: -0.014954, max: 0.005096, mean: 0.000031
+--------------------------------------------------------------------------------
+model.layers.25.self_attn.k_norm.weight True
+Parameter: model.layers.25.self_attn.k_norm.weight
+  Gradient shape: torch.Size([256])
+  Gradient norm: 0.017578
+  Gradient stats - min: -0.011902, max: 0.002151, mean: 0.000011
+--------------------------------------------------------------------------------
+model.layers.25.mlp.gate_proj.weight True
+Parameter: model.layers.25.mlp.gate_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 3.703125
+  Gradient stats - min: -0.714844, max: 0.542969, mean: -0.000001
+--------------------------------------------------------------------------------
+model.layers.25.mlp.up_proj.weight True
+Parameter: model.layers.25.mlp.up_proj.weight
+  Gradient shape: torch.Size([6912, 1152])
+  Gradient norm: 6.375000
+  Gradient stats - min: -0.769531, max: 1.843750, mean: 0.000000
+--------------------------------------------------------------------------------
+model.layers.25.mlp.down_proj.weight True
+Parameter: model.layers.25.mlp.down_proj.weight
+  Gradient shape: torch.Size([1152, 6912])
+  Gradient norm: 55.750000
+  Gradient stats - min: -10.875000, max: 12.812500, mean: -0.000000
+--------------------------------------------------------------------------------
+model.layers.25.input_layernorm.weight True
+Parameter: model.layers.25.input_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.161133
+  Gradient stats - min: -0.003326, max: 0.159180, mean: 0.000175
+--------------------------------------------------------------------------------
+model.layers.25.post_attention_layernorm.weight True
+Parameter: model.layers.25.post_attention_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.006775
+  Gradient stats - min: -0.002319, max: 0.002289, mean: 0.000015
+--------------------------------------------------------------------------------
+model.layers.25.pre_feedforward_layernorm.weight True
+Parameter: model.layers.25.pre_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.244141
+  Gradient stats - min: -0.211914, max: 0.040771, mean: -0.000633
+--------------------------------------------------------------------------------
+model.layers.25.post_feedforward_layernorm.weight True
+Parameter: model.layers.25.post_feedforward_layernorm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.009705
+  Gradient stats - min: -0.002304, max: 0.004730, mean: 0.000009
+--------------------------------------------------------------------------------
+model.norm.weight True
+Parameter: model.norm.weight
+  Gradient shape: torch.Size([1152])
+  Gradient norm: 0.386719
+  Gradient stats - min: -0.025391, max: 0.328125, mean: 0.002075
+--------------------------------------------------------------------------------
+
+=== 按梯度范数排序 ===
+model.layers.25.mlp.down_proj.weight: norm = 55.750000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.24.mlp.down_proj.weight: norm = 28.750000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.18.mlp.down_proj.weight: norm = 27.625000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.14.mlp.down_proj.weight: norm = 26.625000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.12.mlp.down_proj.weight: norm = 26.500000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.4.mlp.down_proj.weight: norm = 25.250000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.19.mlp.down_proj.weight: norm = 24.750000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.13.mlp.down_proj.weight: norm = 24.625000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.8.mlp.down_proj.weight: norm = 24.375000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.16.mlp.down_proj.weight: norm = 23.500000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.17.mlp.down_proj.weight: norm = 23.250000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.22.mlp.down_proj.weight: norm = 23.250000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.21.mlp.down_proj.weight: norm = 22.875000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.10.mlp.down_proj.weight: norm = 22.125000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.23.mlp.down_proj.weight: norm = 21.750000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.0.mlp.down_proj.weight: norm = 20.375000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.15.mlp.down_proj.weight: norm = 19.250000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.11.mlp.down_proj.weight: norm = 17.750000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.20.mlp.down_proj.weight: norm = 16.250000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.embed_tokens.weight: norm = 15.125000, grad shape:torch.Size([262144, 1152]) weight shape:torch.Size([262144, 1152])
+model.layers.0.self_attn.o_proj.weight: norm = 14.875000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.7.mlp.down_proj.weight: norm = 14.562500, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.3.mlp.down_proj.weight: norm = 13.625000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.9.mlp.down_proj.weight: norm = 13.500000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.15.self_attn.o_proj.weight: norm = 12.375000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.6.mlp.down_proj.weight: norm = 12.250000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.11.self_attn.o_proj.weight: norm = 10.875000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.16.self_attn.o_proj.weight: norm = 10.875000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.9.self_attn.o_proj.weight: norm = 10.750000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.2.mlp.down_proj.weight: norm = 10.000000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.10.self_attn.o_proj.weight: norm = 10.000000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.19.self_attn.k_proj.weight: norm = 9.375000, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.5.mlp.down_proj.weight: norm = 8.375000, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.17.self_attn.o_proj.weight: norm = 7.875000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.12.self_attn.o_proj.weight: norm = 7.812500, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.3.self_attn.o_proj.weight: norm = 7.718750, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.13.self_attn.o_proj.weight: norm = 7.625000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.11.self_attn.v_proj.weight: norm = 7.343750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.1.self_attn.o_proj.weight: norm = 7.250000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.18.self_attn.o_proj.weight: norm = 6.968750, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.4.self_attn.o_proj.weight: norm = 6.937500, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.24.self_attn.o_proj.weight: norm = 6.906250, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.16.self_attn.q_proj.weight: norm = 6.812500, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.14.self_attn.o_proj.weight: norm = 6.781250, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.25.self_attn.o_proj.weight: norm = 6.500000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.25.mlp.up_proj.weight: norm = 6.375000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.1.mlp.down_proj.weight: norm = 5.937500, grad shape:torch.Size([1152, 6912]) weight shape:torch.Size([1152, 6912])
+model.layers.20.self_attn.o_proj.weight: norm = 5.937500, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.5.self_attn.o_proj.weight: norm = 5.843750, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.17.self_attn.k_proj.weight: norm = 5.625000, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.8.self_attn.o_proj.weight: norm = 5.312500, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.19.self_attn.v_proj.weight: norm = 5.031250, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.6.self_attn.o_proj.weight: norm = 5.000000, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.15.self_attn.v_proj.weight: norm = 4.750000, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.17.self_attn.q_proj.weight: norm = 4.593750, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.10.self_attn.v_proj.weight: norm = 4.531250, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.15.self_attn.q_proj.weight: norm = 4.500000, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.11.input_layernorm.weight: norm = 4.343750, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.16.self_attn.k_proj.weight: norm = 4.343750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.0.mlp.up_proj.weight: norm = 4.312500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.24.self_attn.v_proj.weight: norm = 4.312500, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.0.mlp.gate_proj.weight: norm = 4.281250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.7.self_attn.o_proj.weight: norm = 4.218750, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.23.self_attn.o_proj.weight: norm = 4.218750, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.5.self_attn.v_proj.weight: norm = 4.031250, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.19.self_attn.o_proj.weight: norm = 4.031250, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.12.self_attn.q_proj.weight: norm = 3.984375, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.16.mlp.up_proj.weight: norm = 3.984375, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.22.self_attn.o_proj.weight: norm = 3.953125, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.15.mlp.up_proj.weight: norm = 3.812500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.16.self_attn.v_proj.weight: norm = 3.781250, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.4.self_attn.v_proj.weight: norm = 3.765625, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.1.self_attn.v_proj.weight: norm = 3.703125, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.25.mlp.gate_proj.weight: norm = 3.703125, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.10.mlp.up_proj.weight: norm = 3.687500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.25.self_attn.v_proj.weight: norm = 3.671875, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.24.self_attn.q_proj.weight: norm = 3.500000, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.17.self_attn.v_proj.weight: norm = 3.453125, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.17.mlp.up_proj.weight: norm = 3.406250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.16.mlp.gate_proj.weight: norm = 3.359375, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.21.self_attn.o_proj.weight: norm = 3.296875, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.24.mlp.up_proj.weight: norm = 3.250000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.13.mlp.up_proj.weight: norm = 3.203125, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.2.self_attn.o_proj.weight: norm = 3.140625, grad shape:torch.Size([1152, 1024]) weight shape:torch.Size([1152, 1024])
+model.layers.4.mlp.up_proj.weight: norm = 3.140625, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.11.self_attn.q_proj.weight: norm = 3.078125, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.11.mlp.up_proj.weight: norm = 3.078125, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.6.mlp.up_proj.weight: norm = 3.046875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.7.mlp.gate_proj.weight: norm = 2.953125, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.14.self_attn.q_proj.weight: norm = 2.953125, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.9.mlp.up_proj.weight: norm = 2.937500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.20.self_attn.q_proj.weight: norm = 2.937500, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.4.mlp.gate_proj.weight: norm = 2.890625, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.17.input_layernorm.weight: norm = 2.890625, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.18.self_attn.q_proj.weight: norm = 2.875000, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.23.self_attn.q_proj.weight: norm = 2.875000, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.0.self_attn.v_proj.weight: norm = 2.843750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.9.self_attn.q_proj.weight: norm = 2.843750, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.13.self_attn.v_proj.weight: norm = 2.843750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.23.self_attn.v_proj.weight: norm = 2.843750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.3.mlp.up_proj.weight: norm = 2.796875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.8.self_attn.v_proj.weight: norm = 2.796875, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.12.mlp.up_proj.weight: norm = 2.750000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.19.self_attn.q_proj.weight: norm = 2.687500, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.18.mlp.up_proj.weight: norm = 2.671875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.11.self_attn.k_proj.weight: norm = 2.640625, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.5.mlp.up_proj.weight: norm = 2.625000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.7.self_attn.v_proj.weight: norm = 2.593750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.14.mlp.up_proj.weight: norm = 2.593750, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.2.mlp.up_proj.weight: norm = 2.531250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.21.self_attn.v_proj.weight: norm = 2.453125, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.22.mlp.up_proj.weight: norm = 2.421875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.7.mlp.up_proj.weight: norm = 2.375000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.22.self_attn.v_proj.weight: norm = 2.375000, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.3.self_attn.v_proj.weight: norm = 2.343750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.1.mlp.up_proj.weight: norm = 2.312500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.8.mlp.up_proj.weight: norm = 2.312500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.12.self_attn.v_proj.weight: norm = 2.234375, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.20.mlp.up_proj.weight: norm = 2.234375, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.23.mlp.up_proj.weight: norm = 2.234375, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.15.mlp.gate_proj.weight: norm = 2.187500, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.9.mlp.gate_proj.weight: norm = 2.156250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.10.mlp.gate_proj.weight: norm = 2.156250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.14.self_attn.v_proj.weight: norm = 2.093750, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.17.mlp.gate_proj.weight: norm = 2.078125, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.11.mlp.gate_proj.weight: norm = 2.046875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.3.mlp.gate_proj.weight: norm = 2.015625, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.19.mlp.up_proj.weight: norm = 1.992188, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.24.mlp.gate_proj.weight: norm = 1.960938, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.6.mlp.gate_proj.weight: norm = 1.906250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.22.self_attn.q_proj.weight: norm = 1.890625, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.22.self_attn.k_proj.weight: norm = 1.882812, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.5.mlp.gate_proj.weight: norm = 1.875000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.9.self_attn.v_proj.weight: norm = 1.835938, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.6.self_attn.q_proj.weight: norm = 1.804688, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.1.self_attn.q_proj.weight: norm = 1.789062, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.21.mlp.up_proj.weight: norm = 1.781250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.1.mlp.gate_proj.weight: norm = 1.757812, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.2.self_attn.q_proj.weight: norm = 1.703125, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.2.mlp.gate_proj.weight: norm = 1.671875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.22.mlp.gate_proj.weight: norm = 1.656250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.13.mlp.gate_proj.weight: norm = 1.625000, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.18.mlp.gate_proj.weight: norm = 1.617188, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.8.mlp.gate_proj.weight: norm = 1.578125, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.6.self_attn.v_proj.weight: norm = 1.570312, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.7.self_attn.q_proj.weight: norm = 1.562500, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.20.self_attn.v_proj.weight: norm = 1.562500, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.20.mlp.gate_proj.weight: norm = 1.546875, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.12.mlp.gate_proj.weight: norm = 1.484375, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.19.mlp.gate_proj.weight: norm = 1.468750, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.13.self_attn.q_proj.weight: norm = 1.445312, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.14.mlp.gate_proj.weight: norm = 1.429688, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.21.mlp.gate_proj.weight: norm = 1.406250, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.23.mlp.gate_proj.weight: norm = 1.382812, grad shape:torch.Size([6912, 1152]) weight shape:torch.Size([6912, 1152])
+model.layers.15.self_attn.k_proj.weight: norm = 1.375000, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.2.self_attn.v_proj.weight: norm = 1.328125, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.21.self_attn.q_proj.weight: norm = 1.250000, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.10.self_attn.q_proj.weight: norm = 1.242188, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.20.self_attn.k_proj.weight: norm = 1.242188, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.5.input_layernorm.weight: norm = 1.210938, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.10.self_attn.k_proj.weight: norm = 1.179688, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.13.self_attn.k_proj.weight: norm = 1.171875, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.24.self_attn.k_proj.weight: norm = 1.101562, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.18.self_attn.v_proj.weight: norm = 1.015625, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.21.self_attn.k_proj.weight: norm = 1.007812, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.3.self_attn.q_proj.weight: norm = 0.992188, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.4.self_attn.k_proj.weight: norm = 0.957031, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.5.self_attn.q_proj.weight: norm = 0.957031, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.1.self_attn.k_proj.weight: norm = 0.894531, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.7.self_attn.k_proj.weight: norm = 0.882812, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.8.self_attn.q_proj.weight: norm = 0.828125, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.12.self_attn.k_proj.weight: norm = 0.777344, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.3.self_attn.k_proj.weight: norm = 0.707031, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.18.self_attn.k_proj.weight: norm = 0.703125, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.25.self_attn.k_proj.weight: norm = 0.691406, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.2.pre_feedforward_layernorm.weight: norm = 0.675781, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.self_attn.q_proj.weight: norm = 0.664062, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.14.self_attn.k_proj.weight: norm = 0.648438, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.2.self_attn.k_proj.weight: norm = 0.644531, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.15.input_layernorm.weight: norm = 0.628906, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.25.self_attn.q_proj.weight: norm = 0.589844, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.0.self_attn.k_proj.weight: norm = 0.539062, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.8.self_attn.k_proj.weight: norm = 0.515625, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.0.pre_feedforward_layernorm.weight: norm = 0.511719, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.9.self_attn.k_proj.weight: norm = 0.511719, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.0.self_attn.q_proj.weight: norm = 0.507812, grad shape:torch.Size([1024, 1152]) weight shape:torch.Size([1024, 1152])
+model.layers.0.post_attention_layernorm.weight: norm = 0.470703, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.7.input_layernorm.weight: norm = 0.451172, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.16.input_layernorm.weight: norm = 0.400391, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.10.input_layernorm.weight: norm = 0.398438, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.norm.weight: norm = 0.386719, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.12.input_layernorm.weight: norm = 0.357422, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.6.self_attn.k_proj.weight: norm = 0.355469, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(/root/autodl-fs/model_zoo/google/gemma-3-1b-itnewsample_v2.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
+Document Class: standalone 2018/03/26 v1.3a Class to compile TeX sub-files stan
+dalone
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+(|extractbb --version))
+
+LaTeX Warning: Unused global option(s):
+    [arwidth].
+
+(/root/autodl-fs/model_zoo/google/gemma-3-1b-itnewsample_v2.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+Underfull \hbox (badness 1448) in paragraph at lines 9--9
+[][][][][][][][][][][][][][][][][][][] [][][][][][] [][][][][][] [][][][][][] [
+][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][]
+[1] (/root/autodl-fs/model_zoo/google/gemma-3-1b-itnewsample_v2.aux) )
+(see the transcript file for additional information)
+Output written on /root/autodl-fs/model_zoo/google/gemma-3-1b-itnewsample_v2.pd
+f (1 page).
+Transcript written on /root/autodl-fs/model_zoo/google/gemma-3-1b-itnewsample_v
+2.log.
+model.layers.5.self_attn.k_proj.weight: norm = 0.347656, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.23.self_attn.k_proj.weight: norm = 0.302734, grad shape:torch.Size([256, 1152]) weight shape:torch.Size([256, 1152])
+model.layers.24.input_layernorm.weight: norm = 0.292969, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.1.pre_feedforward_layernorm.weight: norm = 0.289062, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.5.pre_feedforward_layernorm.weight: norm = 0.269531, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.25.pre_feedforward_layernorm.weight: norm = 0.244141, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.6.input_layernorm.weight: norm = 0.232422, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.3.pre_feedforward_layernorm.weight: norm = 0.229492, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.13.input_layernorm.weight: norm = 0.223633, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.input_layernorm.weight: norm = 0.215820, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.8.input_layernorm.weight: norm = 0.198242, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.24.pre_feedforward_layernorm.weight: norm = 0.192383, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.6.pre_feedforward_layernorm.weight: norm = 0.177734, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.9.input_layernorm.weight: norm = 0.175781, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.0.post_feedforward_layernorm.weight: norm = 0.169922, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.17.self_attn.q_norm.weight: norm = 0.166016, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.25.input_layernorm.weight: norm = 0.161133, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.1.post_attention_layernorm.weight: norm = 0.158203, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.16.self_attn.q_norm.weight: norm = 0.151367, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.3.post_attention_layernorm.weight: norm = 0.150391, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.20.input_layernorm.weight: norm = 0.150391, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.12.pre_feedforward_layernorm.weight: norm = 0.149414, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.7.pre_feedforward_layernorm.weight: norm = 0.145508, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.post_feedforward_layernorm.weight: norm = 0.140625, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.22.input_layernorm.weight: norm = 0.139648, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.15.pre_feedforward_layernorm.weight: norm = 0.137695, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.1.input_layernorm.weight: norm = 0.135742, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.16.self_attn.k_norm.weight: norm = 0.125000, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.16.pre_feedforward_layernorm.weight: norm = 0.125000, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.pre_feedforward_layernorm.weight: norm = 0.124023, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.17.self_attn.k_norm.weight: norm = 0.116699, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.18.input_layernorm.weight: norm = 0.115234, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.10.pre_feedforward_layernorm.weight: norm = 0.112793, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.21.input_layernorm.weight: norm = 0.106934, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.2.input_layernorm.weight: norm = 0.105957, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.14.input_layernorm.weight: norm = 0.104980, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.17.pre_feedforward_layernorm.weight: norm = 0.104004, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.2.post_attention_layernorm.weight: norm = 0.103516, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.19.input_layernorm.weight: norm = 0.102539, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.9.pre_feedforward_layernorm.weight: norm = 0.101562, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.2.self_attn.q_norm.weight: norm = 0.100098, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.13.pre_feedforward_layernorm.weight: norm = 0.100098, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.8.pre_feedforward_layernorm.weight: norm = 0.095703, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.14.pre_feedforward_layernorm.weight: norm = 0.095215, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.22.pre_feedforward_layernorm.weight: norm = 0.090820, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.11.self_attn.k_norm.weight: norm = 0.085449, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.3.input_layernorm.weight: norm = 0.082520, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.23.pre_feedforward_layernorm.weight: norm = 0.082520, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.18.pre_feedforward_layernorm.weight: norm = 0.082031, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.post_attention_layernorm.weight: norm = 0.079590, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.5.post_attention_layernorm.weight: norm = 0.077148, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.11.pre_feedforward_layernorm.weight: norm = 0.076660, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.21.pre_feedforward_layernorm.weight: norm = 0.076172, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.6.post_feedforward_layernorm.weight: norm = 0.075684, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.19.pre_feedforward_layernorm.weight: norm = 0.075684, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.self_attn.q_norm.weight: norm = 0.074707, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.20.pre_feedforward_layernorm.weight: norm = 0.072266, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.3.self_attn.q_norm.weight: norm = 0.067871, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.8.post_feedforward_layernorm.weight: norm = 0.067871, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.5.post_feedforward_layernorm.weight: norm = 0.065918, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.2.self_attn.k_norm.weight: norm = 0.064941, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.1.post_feedforward_layernorm.weight: norm = 0.063965, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.19.self_attn.q_norm.weight: norm = 0.063965, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.11.self_attn.q_norm.weight: norm = 0.062988, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.19.self_attn.k_norm.weight: norm = 0.061035, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.1.self_attn.q_norm.weight: norm = 0.060791, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.2.post_feedforward_layernorm.weight: norm = 0.058105, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.10.self_attn.q_norm.weight: norm = 0.057617, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.23.input_layernorm.weight: norm = 0.057617, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.3.post_feedforward_layernorm.weight: norm = 0.057373, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.4.self_attn.k_norm.weight: norm = 0.056396, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.18.post_attention_layernorm.weight: norm = 0.051514, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.22.self_attn.q_norm.weight: norm = 0.051514, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.22.self_attn.k_norm.weight: norm = 0.049072, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.7.self_attn.q_norm.weight: norm = 0.047363, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.6.post_attention_layernorm.weight: norm = 0.046143, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.0.self_attn.k_norm.weight: norm = 0.044678, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.24.self_attn.q_norm.weight: norm = 0.042725, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.15.self_attn.q_norm.weight: norm = 0.042480, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.7.post_attention_layernorm.weight: norm = 0.041016, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.12.self_attn.q_norm.weight: norm = 0.039795, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.13.self_attn.k_norm.weight: norm = 0.039062, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.1.self_attn.k_norm.weight: norm = 0.037598, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.0.input_layernorm.weight: norm = 0.035645, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.20.post_attention_layernorm.weight: norm = 0.035645, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.20.self_attn.q_norm.weight: norm = 0.035400, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.7.self_attn.k_norm.weight: norm = 0.034180, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.20.self_attn.k_norm.weight: norm = 0.033691, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.9.post_attention_layernorm.weight: norm = 0.033203, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.8.post_attention_layernorm.weight: norm = 0.032959, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.11.post_attention_layernorm.weight: norm = 0.032959, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.15.post_attention_layernorm.weight: norm = 0.032715, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.0.self_attn.q_norm.weight: norm = 0.031128, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.10.post_attention_layernorm.weight: norm = 0.031128, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.21.self_attn.q_norm.weight: norm = 0.030762, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.12.self_attn.k_norm.weight: norm = 0.030029, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.24.self_attn.k_norm.weight: norm = 0.030029, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.6.self_attn.k_norm.weight: norm = 0.029907, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.14.post_attention_layernorm.weight: norm = 0.029663, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.21.self_attn.k_norm.weight: norm = 0.029541, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.10.self_attn.k_norm.weight: norm = 0.028809, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.12.post_feedforward_layernorm.weight: norm = 0.028809, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.15.self_attn.k_norm.weight: norm = 0.028198, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.6.self_attn.q_norm.weight: norm = 0.028076, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.13.post_attention_layernorm.weight: norm = 0.026733, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.16.post_attention_layernorm.weight: norm = 0.026367, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.3.self_attn.k_norm.weight: norm = 0.024902, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.9.post_feedforward_layernorm.weight: norm = 0.024902, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.12.post_attention_layernorm.weight: norm = 0.024658, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.13.self_attn.q_norm.weight: norm = 0.024414, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.7.post_feedforward_layernorm.weight: norm = 0.023804, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.25.self_attn.q_norm.weight: norm = 0.021973, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.18.self_attn.k_norm.weight: norm = 0.020630, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.13.post_feedforward_layernorm.weight: norm = 0.018555, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.21.post_feedforward_layernorm.weight: norm = 0.018188, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.25.self_attn.k_norm.weight: norm = 0.017578, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.16.post_feedforward_layernorm.weight: norm = 0.015564, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.18.self_attn.q_norm.weight: norm = 0.014465, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.8.self_attn.q_norm.weight: norm = 0.013672, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.23.self_attn.k_norm.weight: norm = 0.013672, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.10.post_feedforward_layernorm.weight: norm = 0.013550, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.17.post_attention_layernorm.weight: norm = 0.013245, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.14.self_attn.q_norm.weight: norm = 0.013123, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.19.post_attention_layernorm.weight: norm = 0.012817, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.9.self_attn.k_norm.weight: norm = 0.012451, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.9.self_attn.q_norm.weight: norm = 0.012390, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.11.post_feedforward_layernorm.weight: norm = 0.011475, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.5.self_attn.q_norm.weight: norm = 0.011353, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.8.self_attn.k_norm.weight: norm = 0.011169, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.14.self_attn.k_norm.weight: norm = 0.010559, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.23.post_attention_layernorm.weight: norm = 0.010559, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.15.post_feedforward_layernorm.weight: norm = 0.010071, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.23.self_attn.q_norm.weight: norm = 0.010071, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.25.post_feedforward_layernorm.weight: norm = 0.009705, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.14.post_feedforward_layernorm.weight: norm = 0.009521, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.24.post_attention_layernorm.weight: norm = 0.009521, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.17.post_feedforward_layernorm.weight: norm = 0.008545, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.22.post_attention_layernorm.weight: norm = 0.008423, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.5.self_attn.k_norm.weight: norm = 0.007935, grad shape:torch.Size([256]) weight shape:torch.Size([256])
+model.layers.18.post_feedforward_layernorm.weight: norm = 0.007172, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.21.post_attention_layernorm.weight: norm = 0.007111, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.25.post_attention_layernorm.weight: norm = 0.006775, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.19.post_feedforward_layernorm.weight: norm = 0.006439, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.22.post_feedforward_layernorm.weight: norm = 0.006134, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.20.post_feedforward_layernorm.weight: norm = 0.005249, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.23.post_feedforward_layernorm.weight: norm = 0.005249, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+model.layers.24.post_feedforward_layernorm.weight: norm = 0.004608, grad shape:torch.Size([1152]) weight shape:torch.Size([1152])
+
+梯度信息已保存到 weight_gradients.json，共 340 个参数
+PDF file generated successfully.
