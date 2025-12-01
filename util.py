@@ -54,9 +54,9 @@ def get_test_data(data_pth):
 
     return test
 
-def get_open_ended_answer(model, tokenizer, max_new_tokens= 2048):
-    ds_test = datasets.load_dataset('json', data_files ='/root/autodl-fs/LRP/open_ended_dataset/all_data.json')
-
+def get_open_ended_answer(model, tokenizer, textlist, max_new_tokens= 2048):
+    
+    bar = tqdm(total=len(textlist))
     device='cuda' # cpu cuda
     print('*'*20)
     result = []
@@ -87,10 +87,61 @@ def get_open_ended_answer(model, tokenizer, max_new_tokens= 2048):
         content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
 
         result.append(content)
+        print('itext:',itext)
+        print('content:',content)
         
         bar.update(1)
     return result
     
+from vllm import LLM, SamplingParams
+from tqdm import tqdm
+
+def get_open_ended_answer_vllm(llm, textlist, max_new_tokens=2048):
+    
+
+    sampling_params = SamplingParams(
+        max_tokens=max_new_tokens,
+        temperature=0.0,       # 等价于 do_sample=False
+        top_p=1.0,
+        repetition_penalty=1.1,
+    )
+
+    results = []
+    print("*" * 20)
+
+    # vLLM 支持一次性批量输入
+    outputs = llm.generate(textlist, sampling_params)
+
+    for itext, out in zip(textlist, outputs):
+
+        # vLLM 的 output 为 list，每个 item 里有 text
+        full_output = out.outputs[0].text
+
+        # 手动切掉输入前缀（vLLM 没有 return_full_text=False）
+        # 直接通过字符串替换，不依赖 token 长度
+        if full_output.startswith(itext):
+            gen_text = full_output[len(itext):]
+        else:
+            gen_text = full_output
+
+        # 解析 <think> 的 token
+        # 你原来用的是 token ID 151668
+        # 这里用字符串判断，不需要手动 decode tokens
+        think_tag = "</think>"
+        idx = gen_text.rfind(think_tag)
+        if idx != -1:
+            thinking_content = gen_text[:idx + len(think_tag)]
+            content = gen_text[idx + len(think_tag):].strip()
+        else:
+            thinking_content = ""
+            content = gen_text.strip()
+
+        results.append(content)
+
+        #print("itext:", itext)
+        #print("content:", content)
+
+    return results
 
 
 
