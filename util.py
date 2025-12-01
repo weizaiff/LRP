@@ -54,6 +54,58 @@ def get_test_data(data_pth):
 
     return test
 
+def get_open_ended_answer(model, tokenizer, max_new_tokens= 2048):
+    ds_test = datasets.load_dataset('json', data_files ='/root/autodl-fs/LRP/open_ended_dataset/all_data.json')
+
+    device='cuda' # cpu cuda
+    print('*'*20)
+    result = []
+    for itext in textlist:
+        
+        input_text = itext
+        #print('input:', input_text)
+        input_ids = tokenizer(input_text, return_tensors="pt").to(device)
+        #print('input_ids:', input_ids)
+    
+        output_ids = model.generate(**input_ids, do_sample=False, num_beams=1,repetition_penalty=1.1, max_new_tokens= max_new_tokens) #max_length 
+        output_ids = output_ids[0][len(input_ids.input_ids[0]):].tolist() 
+
+        '''
+        For qwen3
+
+        '''
+        # parsing thinking content
+        try:
+            # rindex finding 151668 (</think>)
+            index = len(output_ids) - output_ids[::-1].index(151668)
+        except ValueError:
+            index = 0
+
+            
+            
+        thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
+        content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
+
+        result.append(content)
+        
+        bar.update(1)
+    return result
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
 
 
 
