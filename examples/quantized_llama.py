@@ -15,8 +15,8 @@ quantization_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16, # use bfloat16 to prevent overflow in gradients
 )
 
-path = 'meta-llama/Llama-3.2-1B-Instruct'
-model = modeling_llama.LlamaForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16, quantization_config=quantization_config)
+path = '/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf'#'meta-llama/Llama-3.2-1B-Instruct'
+model = modeling_llama.LlamaForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16 )#, quantization_config=quantization_config)
 
 # optional gradient checkpointing to save memory (2x forward pass)
 model.train()
