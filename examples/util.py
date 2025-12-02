@@ -4,7 +4,7 @@ import os
 def save_per_example_lrp_res(res_map, model):
     for name, param in model.named_parameters():
         # 检查参数是否有梯度
-        print(name,  param.grad is not None)
+        #print(name,  param.grad is not None)
         if param.grad is not None:
             if len(param.grad.shape)>1:
                 res_map[name].append(param.grad.clone().detach().sum(dim=-1).squeeze(-1))
