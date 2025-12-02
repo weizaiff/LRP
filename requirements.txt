@@ -1,3 +1,5 @@
-transformers==4.52.4
+transformers==4.52.4 #可用
+
+#transformers==4.50.0 === save 能够成功！！！！
 vllm==0.2.7
 #python==3.11
