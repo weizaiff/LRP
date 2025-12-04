@@ -127,28 +127,36 @@ def run(iexp_map):
     
         get_lrp_res(data_path, output_dir, model, tokenizer )
 
-exp_setting=[
+exp_setting_org=[
     
     {
         'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
         'language':'vi',
-        'prefix_output_dir':'/root/autodl-fs/output_grad/llama2',
-        'data_path':'/root/autodl-fs/LRP_data/vi_random_1000.jsonl'
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/vi_random_5000.jsonl'
     },
     {
         'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
         'language':'zh',
-        'prefix_output_dir':'/root/autodl-fs/output_grad/llama2',
-        'data_path':'/root/autodl-fs/LRP_data/zh_random_1000.jsonl'
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/zh_random_5000.jsonl'
     },
     {
         'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
         'language':'en',
-        'prefix_output_dir':'/root/autodl-fs/output_grad/llama2',
-        'data_path':'/root/autodl-fs/LRP_data/en_random_1000.jsonl'
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/en_random_5000.jsonl'
     }
 ]
-
+exp_setting=[
+    
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
+        'language':'en',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/en_random_5000.jsonl'
+    }
+]
 
 for iexp_map in exp_setting:
     run(iexp_map)
