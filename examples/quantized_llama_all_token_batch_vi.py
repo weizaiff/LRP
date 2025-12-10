@@ -130,9 +130,9 @@ def run(iexp_map):
 exp_setting=[
     
     {
-        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf',
         'language':'vi',
-        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251210_5000samples_llama2_base',
         'data_path':'/root/autodl-fs/LRP_data/vi_random_5000.jsonl'
     }
 ]
