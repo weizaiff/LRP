@@ -1,0 +1,2 @@
+2025-12-11 14:26:15 - evalscope - INFO: Running with native backend
+2025-12-11 14:26:15 - evalscope - INFO: Creating model /root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf with eval_type=llm_ckpt base_url=None, config={'batch_size': 1, 'max_tokens': 2048, 'top_p': 1.0, 'temperature': 1.0, 'do_sample': False, 'top_k': 50, 'n': 1}, model_args={'revision': 'master', 'precision': 'torch.float16'}
