@@ -66,7 +66,7 @@ def get_method_name(class_type):
 
 
 
-def calc_metric(df_judge_res,result_dict ):
+def calc_metric(df_judge_res,result_dict, beta = 1 ):
     '''
         calc LPS:
             LPS = drop(target) / mean(drop(other)) * mean(drop)
@@ -173,12 +173,15 @@ def calc_metric(df_judge_res,result_dict ):
         '''
         org_target = lang_score_baseline[tmp_taget_lang]
         target_drop = tmp_drop[tmp_taget_lang]
-        max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
+        #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
+
+        # actually mean drop
+        max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
         
         EPS =1e-12
         precision = target_drop / (target_drop + max_other_drop + EPS)
         recall = target_drop / (org_target + EPS)
-        f1 = 2 * precision * recall / (precision + recall + EPS)
+        f1 = (1+ beta**2) * precision * recall / (precision + recall* beta**2 + EPS)
     
     
         res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f1
@@ -221,7 +224,56 @@ def calc_metric(df_judge_res,result_dict ):
 
 
     
-    
+def show_result(mname,res_acuall_score, res_score,  digits=3):
+    print("\n" + "=" * 60)
+    print(f"Method: {mname}")
+    print("=" * 60)
+
+    data = res_acuall_score[mname]
+
+    # ---- normalize to: list[(tgt, {eval: score})] ----
+    if isinstance(data, dict):
+        items = list(data.items())
+    elif isinstance(data, (list, tuple)):
+        # could be list[(tgt, dict)] already
+        items = list(data)
+    else:
+        raise TypeError(f"Unsupported type for res_acuall_score[{mname!r}]: {type(data)}")
+
+    # infer eval langs (union + stable order)
+    eval_langs = []
+    seen = set()
+    for _, d in items:
+        for k in d.keys():
+            if k not in seen:
+                seen.add(k)
+                eval_langs.append(k)
+
+    # header
+    print("{:<12}".format("Target\\Eval"), end="")
+    for l in eval_langs:
+        print("{:>10}".format(l), end="")
+    print()
+    print("-" * (12 + 10 * len(eval_langs)))
+
+    # rows
+    for tgt, d in sorted(items, key=lambda x: x[0]):
+        print("{:<12}".format(tgt), end="")
+        for l in eval_langs:
+            v = d.get(l, None)
+            if v is None:
+                s = "NA"
+            else:
+                s = f"{float(v):.{digits}f}"
+            print("{:>10}".format(s), end="")
+        print()
+
+    # langspec
+    print("\nLangSpec-F1:")
+    for k, v in sorted(res_score[mname].items(), key=lambda x: x[0]):
+        print(f"  {k:<4}: {float(v):.{digits}f}")
+
+    print("=" * 60)
 
     
     
