@@ -275,6 +275,70 @@ def show_result(mname,res_acuall_score, res_score,  digits=3):
 
     print("=" * 60)
 
+
+
+def get_nlu_metric_score(lang_score_baseline, lang_score_tmp, method_name, task_list, target_task):
+
+    
+    res_score = {}
+    res_acuall_score = {}
+    # calc drop
+   
+    # calc per lang score
+    tmp_drop = {}
+    for i_taskname in lang_score_baseline.keys():
+        # drop value
+        #tmp_drop[i_taskname] = lang_score_baseline[i_taskname] - lang_score_tmp[i_taskname]
+        # drop rate
+        #tmp_drop[i_taskname] = (lang_score_baseline[i_taskname] - lang_score_tmp[i_taskname])/lang_score_baseline[i_taskname]
+
+        # just drop case
+        tmp_drop[i_taskname] = max(lang_score_baseline[i_taskname] - lang_score_tmp[i_taskname], 0 )
+    
+
+    tmp_taget_lang = target_task
+    lang_list = task_list
+    lang_list.remove(tmp_taget_lang)
+
+
+    alpha=0.7
+    def sigmoid(x):
+        return 1/(1 + np.exp(-x))
+    org_target = lang_score_baseline[tmp_taget_lang]
+    drop_target = tmp_drop[tmp_taget_lang]
+    drop_other_mean = (tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2
+
+    
+    #res_score[tmp_taget_lang] = sigmoid(alpha*np.exp(1*drop_target) - (1- alpha)*np.exp(1*(drop_other_mean)))
+
+    #score = 2**(drop_rate)- 2**abs(other_drop_rate)
+    #res_score[tmp_taget_lang] = (alpha*2**drop_target - (1- alpha)*2**abs(drop_other_mean))/(3*alpha - 1)
+    
+    #score = ((alpha)*(2**(drop_rate)-1)- (1-alpha)(2**abs(other_drop_rate)-1)
+    #res_score[tmp_taget_lang] = alpha*(2**drop_target-1) - (1- alpha)*(2**abs(drop_other_mean)-1)
+
+    #alpha = 0.8 beta = 6 score = sigmoid(beta*((alpha)*(2**(drop_rate)-1)- (1-alpha)(2**abs(other_drop_rate)-1)))
+    #beta = 6
+    #res_score[tmp_taget_lang] = sigmoid(beta*(alpha*(2**drop_target-1) - (1- alpha)*(2**abs(drop_other_mean)-1) ))
+
+
+    '''
+            precision = target_drop / (target_drop + max_other_drop + EPS)
+            recall = target_drop / (org_model_task_result[target_task] + EPS)
+            f1 = 2 * precision * recall / (precision + recall + EPS)
+
+            *_drop = max(org_drop, 0)#只考虑指标掉了的情况，如果指标增加了，说明没有找到暂时不考虑
+    '''
+    EPS=1e-12
+    precision = drop_target/(drop_target + max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]) + EPS)
+    recall = drop_target/(org_target + EPS)
+    f1 = 2 * precision * recall / (precision + recall + EPS)
+
+    res_score[tmp_taget_lang] =  f1
+
+    return res_score
+
+
     
     
 
