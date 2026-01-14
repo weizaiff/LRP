@@ -277,7 +277,7 @@ def show_result(mname,res_acuall_score, res_score,  digits=3):
 
 
 
-def get_nlu_metric_score(lang_score_baseline, lang_score_tmp, method_name, task_list, target_task):
+def get_nlu_metric_score(lang_score_baseline, lang_score_tmp, method_name, task_list, target_task, beta=1):
 
     
     res_score = {}
@@ -329,10 +329,18 @@ def get_nlu_metric_score(lang_score_baseline, lang_score_tmp, method_name, task_
 
             *_drop = max(org_drop, 0)#只考虑指标掉了的情况，如果指标增加了，说明没有找到暂时不考虑
     '''
+    # langspec-F1_v1
+    if False:
+        EPS=1e-12
+        precision = drop_target/(drop_target + max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]) + EPS)
+        recall = drop_target/(org_target + EPS)
+        f1 = 2 * precision * recall / (precision + recall + EPS)
+
+    #langspec-F1_v2 
     EPS=1e-12
-    precision = drop_target/(drop_target + max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]) + EPS)
+    precision = drop_target/(drop_target +sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2 + EPS)
     recall = drop_target/(org_target + EPS)
-    f1 = 2 * precision * recall / (precision + recall + EPS)
+    f1 = (1+ beta**2) * precision * recall / (precision + recall* beta**2 + EPS)
 
     res_score[tmp_taget_lang] =  f1
 

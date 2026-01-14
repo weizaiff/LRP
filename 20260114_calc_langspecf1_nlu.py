@@ -236,7 +236,10 @@ for iexpname, imask_resm, iorg_res in exp_map:
 
     ires_dict = {}
     for ilang, ires in imask_resm.items():
-        res_score = langspecf1_utils.get_nlu_metric_score(iorg_res, ires, iexpname, ['MMLU', 'C-eval', 'Belebele_vi'], lang2targettask[ilang] )
+        res_score = langspecf1_utils.get_nlu_metric_score(iorg_res, ires, iexpname, 
+                                                          ['MMLU', 'C-eval', 'Belebele_vi'], 
+                                                          lang2targettask[ilang],
+                                                         beta=2.5)
         ires_dict[ilang] = res_score
     
     total_res[iexpname] = ires_dict
