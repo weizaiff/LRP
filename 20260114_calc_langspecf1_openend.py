@@ -56,24 +56,25 @@ def main(judege_path):
         get LAPE result
     
     '''
-    
-    # lape neuronFromBase & chat generation
-    ds_lape_mask_base = datasets.load_dataset('json', data_files = '/root/autodl-fs/LRP/open_ended_data_generation/20251204_all_exp/1208_all_generation4judge.json_gpt4o.json')
-    
-    
-    
-    
-    df_lape_mask_base = ds_lape_mask_base['train'].to_pandas()
-    
-    df_lape_mask_base_en = df_lape_mask_base.loc[(df_lape_mask_base['model_type']=='mask_en|open_ended')].reset_index(drop=True)
-    df_lape_mask_base_vi = df_lape_mask_base.loc[(df_lape_mask_base['model_type']=='mask_vi|open_ended')].reset_index(drop=True)
-    
-    df_lape_mask_base_zh = df_lape_mask_base.loc[(df_lape_mask_base['model_type']=='mask_zh|open_ended')].reset_index(drop=True)
-    
-    df_lape_mask_lape = pd.concat([df_lape_mask_base_en,df_lape_mask_base_vi, df_lape_mask_base_zh ])
-    
-    
-    df_lape_mask_lape['model_type'].value_counts()
+
+    if False:
+        # lape neuronFromBase & chat generation
+        ds_lape_mask_base = datasets.load_dataset('json', data_files = '/root/autodl-fs/LRP/open_ended_data_generation/20251204_all_exp/1208_all_generation4judge.json_gpt4o.json')
+        
+        
+        
+        
+        df_lape_mask_base = ds_lape_mask_base['train'].to_pandas()
+        
+        df_lape_mask_base_en = df_lape_mask_base.loc[(df_lape_mask_base['model_type']=='mask_en|open_ended')].reset_index(drop=True)
+        df_lape_mask_base_vi = df_lape_mask_base.loc[(df_lape_mask_base['model_type']=='mask_vi|open_ended')].reset_index(drop=True)
+        
+        df_lape_mask_base_zh = df_lape_mask_base.loc[(df_lape_mask_base['model_type']=='mask_zh|open_ended')].reset_index(drop=True)
+        
+        df_lape_mask_lape = pd.concat([df_lape_mask_base_en,df_lape_mask_base_vi, df_lape_mask_base_zh ])
+        
+        
+        df_lape_mask_lape['model_type'].value_counts()
     
     
     
