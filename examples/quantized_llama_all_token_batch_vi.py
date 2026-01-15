@@ -54,7 +54,10 @@ def get_lrp_res(data_path, output_dir, model, tokenizer ):
         before_last_token_logits =torch.gather(output_logits[:,:-1,:], dim=-1,index=input_ids[:, 1:].unsqueeze(-1) ).squeeze(-1)
         print("before_last_token_logits shape", before_last_token_logits.shape)
         
-        max_logits=(torch.sum(before_last_token_logits)+max_logits)/(before_last_token_logits.reshape(-1).shape[0]+1)
+        #max_logits=(torch.sum(before_last_token_logits)+max_logits)/(before_last_token_logits.reshape(-1).shape[0]+1)
+
+        # 20260115 update: drop last token
+        max_logits=(torch.sum(before_last_token_logits))/(before_last_token_logits.reshape(-1).shape[0])
         
         
         # Backward pass (the relevance is initialized with the value of max_logits)
@@ -113,11 +116,15 @@ def run(iexp_map):
     
         output_dir =os.path.join(iexp_map['prefix_output_dir'],path.split('/')[-1], iexp_map['language'] ) #f'/root/autodl-fs/output_grad/{path.split('/')[-1]}'+'en'
         os.makedirs(output_dir, exist_ok=True)
+        
         model = modeling_llama.LlamaForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16) #, quantization_config=quantization_config)
-    
+        #use quantized model
+        #model = modeling_llama.LlamaForCausalLM.from_pretrained(path, device_map='cuda', torch_dtype=torch.bfloat16, quantization_config=quantization_config)
+        
         # optional gradient checkpointing to save memory (2x forward pass)
         model.train()
-        model.gradient_checkpointing_enable()
+        #model.gradient_checkpointing_enable()
+        model.gradient_checkpointing_disable()
     
         # deactive gradients on parameters to save memory
         for param in model.parameters():
@@ -127,16 +134,48 @@ def run(iexp_map):
     
         get_lrp_res(data_path, output_dir, model, tokenizer )
 
+# before
+exp_setting_org=[
+    
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
+        'language':'vi',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/vi_random_5000.jsonl'
+    },
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
+        'language':'zh',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/zh_random_5000.jsonl'
+    },
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf',
+        'language':'en',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251204_5000samples_llama2',
+        'data_path':'/root/autodl-fs/LRP_data/en_random_5000.jsonl'
+    }
+]
+exp_setting=[
+    
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf',
+        'language':'en',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20251210_5000samples_llama2_base',
+        'data_path':'/root/autodl-fs/LRP_data/en_random_5000.jsonl'
+    }
+]
+
+# 20260115 llama2-7b-hf
 exp_setting=[
     
     {
         'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf',
         'language':'vi',
-        'prefix_output_dir':'/root/autodl-fs/output_grad/20251210_5000samples_llama2_base',
-        'data_path':'/root/autodl-fs/LRP_data/vi_random_5000.jsonl'
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20260115_newrandom5000samples_quantied_llama2_base',
+        'data_path':'/root/autodl-fs/LRP_data/all_data_sampling_ver/c4_vi_uniform_5k.jsonl'
     }
 ]
-
 
 for iexp_map in exp_setting:
     run(iexp_map)

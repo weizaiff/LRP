@@ -1,3 +1,16 @@
+
+
+
+### 20260115:
+    conda update:
+        mkdir -p /root/autodl-fs/conda/pkgs
+        conda config --add pkgs_dirs /root/autodl-fs/conda/pkgs
+        
+        mkdir -p /root/autodl-fs/conda/envs
+        conda config --add envs_dirs /root/autodl-fs/conda/envs
+
+
+
 <div align="center">
   <img src="docs/source/_static/lxt_logo.png" width="300"/>
 
