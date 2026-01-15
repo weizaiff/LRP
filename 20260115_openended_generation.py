@@ -49,11 +49,11 @@ from transformers import AutoConfig
 from datetime import datetime
 from tqdm import tqdm
 from open_ended_utils import *
-
+from types import MethodType
 
 model_path ='/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf'
 is_llama = True# bool(model_path.find('llama') >= 0)
-
+config = AutoConfig.from_pretrained(model_path,trust_remote_code=True)
 
 # llama2 7b base
 save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260115_newrandom5000samples_cal_llama2_7b_base"
@@ -131,7 +131,7 @@ def build_model_list(llm, base=BASE):
 model_list = build_model_list(llm)
 
 # filter
-model_list = (get_need_exp(model_list))
+#model_list = (get_need_exp(model_list))
 
 
 # add LAPE exp list
@@ -142,7 +142,7 @@ if IS_ADD_LAPE_MODEL_LIST:
         ('/root/autodl-fs/LAPE_res/202251124_zh.pt', 'LAPE_zh')
     ]
         
-
+print('model_list:', model_list)
 
 data_list = [
     (ds_test, 'open_ended')
@@ -179,12 +179,12 @@ for model_path_pt, model_name in model_list:
             if 'LAPE' in model_name:
                 #LRP
                 tmp_neuron = torch.load(model_path_pt, weights_only=False)
-                i_model = get_mask_neuron_model_vllm_LRP(llm, (tmp_neuron), is_llama = is_llama)
+                i_model = get_mask_neuron_model_vllm_LAPE(llm, (tmp_neuron), is_llama = is_llama)
                 
             else:
                 #LRP
                 tmp_neuron = torch.load(model_path_pt, weights_only=False)
-                i_model = get_mask_neuron_model_vllm_LRP(llm, convert_LAPE_format(tmp_neuron), is_llama = is_llama)
+                i_model = get_mask_neuron_model_vllm_LRP(llm, convert_LAPE_format(tmp_neuron, config), is_llama = is_llama)
         else:
             i_model = llm
 

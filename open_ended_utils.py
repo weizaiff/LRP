@@ -1,9 +1,78 @@
+import argparse
+from types import MethodType
 
+import numpy as np
+import torch
+import torch.nn.functional as F
+from vllm import LLM, SamplingParams
+from tqdm import tqdm
 
+import torch
+from types import MethodType
+'''
+    convert LRP_based neuron to LAPE format
 
+'''
+import re
 
+def convert_LAPE_format(neuron_en, config):
 
+    layer_list = [{'up_proj':[], 'gate_proj':[], 'down_proj':[]} for _ in range(config.num_hidden_layers)]
 
+    if isinstance(neuron_en, dict):
+        new_tmp = []
+        for ineuron, iscore in neuron_en.items():
+            new_tmp.append((ineuron, iscore))
+
+        neuron_en = new_tmp
+        
+    
+    for ineuron, iscore in neuron_en:
+    
+        
+        m = re.search(r'layers?\.(\d+).mlp.(.+).weight_index_([0-9]+)', ineuron)
+        
+        layer_index = int(m.group(1))
+        layer_type = m.group(2)
+        layer_neuron_index = int(m.group(3))
+        assert layer_type in ['up_proj', 'gate_proj', 'down_proj']
+    
+        layer_list[layer_index][layer_type].append(int(layer_neuron_index))
+
+    return layer_list
+
+def get_mask_neuron_model_vllm_LAPE(model, activation_mask, is_llama = True):
+
+    if activation_mask:
+            def factory(mask):
+                def llama_forward(self, x):
+                    gate_up, _ = self.gate_up_proj(x)  # b, l, 2i
+                    i = gate_up.size(-1)
+                    activation = F.silu(gate_up[:, :, : i // 2])
+                    activation.index_fill_(2, mask, 0)
+                    x = activation * gate_up[:, :, i // 2 :]
+                    x, _ = self.down_proj(x)
+                    return x
+    
+                def bloom_forward(self, x: torch.Tensor):
+                    x, _ = self.dense_h_to_4h(x)
+                    x = self.gelu_impl(x)
+                    x.index_fill_(2, mask, 0)
+                    x, _ = self.dense_4h_to_h(x)
+                    return x
+    
+                if is_llama:
+                    return llama_forward
+                else:
+                    return bloom_forward
+    
+            for i, layer_mask in enumerate(activation_mask):
+                if is_llama:
+                    obj = model.llm_engine.driver_worker.model_runner.model.model.layers[i].mlp
+                else:
+                    obj = model.llm_engine.driver_worker.model_runner.model.transformer.h[i].mlp
+                obj.forward = MethodType(factory(layer_mask.to('cuda')), obj)
+    return model
 
 def get_mask_neuron_model_vllm_LRP(model, activation_mask_dict, is_llama = True):
 
@@ -78,6 +147,7 @@ def get_mask_neuron_model_vllm_LRP(model, activation_mask_dict, is_llama = True)
                     obj = model.llm_engine.driver_worker.model_runner.model.transformer.h[i].mlp
 
                 ilayer_mask_dict_cuda = {}
+                #print(ilayer_mask_dict)
                 for ikey ,ival in ilayer_mask_dict.items():
                     if len(ival)>0:
                         ilayer_mask_dict_cuda[ikey] = torch.LongTensor(ival).to('cuda')
