@@ -114,16 +114,19 @@ def main(judege_path):
     print('baseline:', lang_score_baseline)
     
     
-    langspecf1_utils.show_result('mask', res_acuall_score, res_score)
+    langspecf1_utils.show_result('LAPE', res_acuall_score, res_score)
     
     
-    langspecf1_utils.show_result('th_1_selected_LRP_kur_res_zscore', res_acuall_score, res_score)
+    #langspecf1_utils.show_result('th_1_selected_LRP_kur_res_zscore', res_acuall_score, res_score)
+
+    # random
+    langspecf1_utils.show_result('th_1_selected_LRP_kur_res_random_zscore', res_acuall_score, res_score)
 
 
 if __name__=='__main__':
     
     # llama2 7b chat
-    judege_path ='/root/autodl-fs/LRP/open_ended_data_generation/20251204_all_exp/1208_all_generation4judge.json_gpt4o.json'
+    #judege_path ='/root/autodl-fs/LRP/open_ended_data_generation/20251204_all_exp/1208_all_generation4judge.json_gpt4o.json'
     
     # llama2 7b base
     #judege_path ='/root/autodl-fs/LRP/open_ended_data_generation/20251210_llama2_7b_base/1210_all_generation4judge.json_gpt4o.json'
@@ -135,6 +138,12 @@ if __name__=='__main__':
     # llama2 7b base LRP random mask
     #judege_path= '/root/autodl-fs/LRP/open_ended_data_generation/20251218_LRP_random_mask/20251218_LRP_generation_all.json4judge.json_gpt4o.json'
 
+    # 20260119 new random 5000samples
+    #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260115_newrandom5000samples_cal_llama2_7b_base/20260119_generation_all_models.json_gpt4o.json'
+
+    #20260119 new random 5000samples & random mask
+    judege_path ='/root/autodl-fs/LRP/open_ended_data_generation/20260119_newrandom5000samples_cal_llama2_7b_base_random_mask/20260119_generation_all_models_random_mask.json_gpt4o.json'
+    
     main(judege_path)
 
 

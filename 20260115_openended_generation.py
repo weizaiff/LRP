@@ -56,12 +56,14 @@ is_llama = True# bool(model_path.find('llama') >= 0)
 config = AutoConfig.from_pretrained(model_path,trust_remote_code=True)
 
 # llama2 7b base
-save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260115_newrandom5000samples_cal_llama2_7b_base"
+save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260119_newrandom5000samples_cal_llama2_7b_base_random_mask_2"
 
 #neuron path
-BASE = "/root/autodl-fs/LRP_kur_res/20260115_newrandom5000samples_cal_llama2_7b_base"
+#BASE = "/root/autodl-fs/LRP_kur_res/20260115_newrandom5000samples_cal_llama2_7b_base"
+#random  mask time0 
+BASE = "/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time2_"
 
-IS_ADD_LAPE_MODEL_LIST = True #是否加上LAPE的open-ended测试
+IS_ADD_LAPE_MODEL_LIST = False #是否加上LAPE的open-ended测试
 
 # ======== Build model list (auto) ========
 #BASE = "/root/autodl-fs/LRP_kur_res/20251204_5000samples_cal_llama2_7b_chat"
@@ -121,7 +123,7 @@ dt = datetime.now().strftime("%Y%m%d")
 
 
 def build_model_list(llm, base=BASE):
-    ml = [(llm, "org_model")]
+    ml = []#[(llm, "org_model")]
     for fname in sorted(os.listdir(base)):
         if fname.endswith(".pt") and not fname.startswith("all_mlp"):
             path = f"{base}/{fname}"
@@ -136,10 +138,20 @@ model_list = build_model_list(llm)
 
 # add LAPE exp list
 if IS_ADD_LAPE_MODEL_LIST:
+    # neuron usage from: 20251127_calc_org_LAPE_ppl.ipynb
+    neuron_path = "/root/autodl-fs/Language-Specific-Neurons/LLaMA-2-7B.neuron.pth"
+    print('='*10)
+    print('='*10)
+    print("neuron path:", neuron_path)
+    print('='*10)
+    print('='*10)
+    '''
+     format: method_name+ language
+    '''
     model_list+=[
-        ('/root/autodl-fs/LAPE_res/202251124_en.pt', 'LAPE_en'),
-        ('/root/autodl-fs/LAPE_res/202251124_vi.pt', 'LAPE_vi'),
-        ('/root/autodl-fs/LAPE_res/202251124_zh.pt', 'LAPE_zh')
+        (neuron_path, 'LAPE_en'),
+        (neuron_path, 'LAPE_vi'),
+        (neuron_path, 'LAPE_zh')
     ]
         
 print('model_list:', model_list)
@@ -170,6 +182,9 @@ for model_path_pt, model_name in model_list:
         # ======== Skip if exists ========
         if os.path.exists(save_path):
             print(f"[Skip] Exists: {save_path}")
+            # load data
+            ds_test_tmp = datasets.load_dataset('json', data_files= save_path)
+            ds_list.append(ds_test_tmp['train'])
             continue
 
         # ======== Load Mask ========
@@ -178,8 +193,10 @@ for model_path_pt, model_name in model_list:
             
             if 'LAPE' in model_name:
                 #LRP
-                tmp_neuron = torch.load(model_path_pt, weights_only=False)
-                i_model = get_mask_neuron_model_vllm_LAPE(llm, (tmp_neuron), is_llama = is_llama)
+                #tmp_neuron = torch.load(model_path_pt, weights_only=False)
+                need_lang = model_name.split('_')[-1]
+                assert len(need_lang)>0
+                i_model = get_mask_neuron_model_vllm_LAPE(llm, model_path_pt, need_lang, is_llama = is_llama)
                 
             else:
                 #LRP
@@ -209,10 +226,38 @@ for model_path_pt, model_name in model_list:
     model_list_bar.update(1)
 
 
+'''
+生成judge的prompt
+
+'''
+'''
+生成judge的prompt
+
+'''
+
+prompt_template = (
+    "You are a neutral judge. Score the model’s answer from 1 to 10 based on correctness, completeness, clarity, and usefulness.\n"
+    "Respond ONLY in this JSON format:\n"
+    '{{"score": <1-10>, "reason": "<brief reason>"}}\n\n'
+    "Question:\n{question}\n\n"
+    "Answer:\n{answer}"
+)
+
+def get_judge_promt(x):
+    return prompt_template.format(question= x[0], answer= x[1])
+    
+
 # ======== Save final merge ========
 if len(ds_list) > 0:
     ds_final = datasets.concatenate_datasets(ds_list)
-    final_path = os.path.join(save_dir, f"{dt}_LRP_generation_all_models.json")
+
+    # add judge prompt
+    df_final = ds_final.to_pandas()
+    df_final['judge_prompt'] = df_final[['text','answer']].apply(lambda x: prompt_template.format(question= x[0], answer= x[1]), axis=1)
+
+    ds_final = datasets.Dataset.from_pandas(df_final)
+    
+    final_path = os.path.join(save_dir, f"{dt}_generation_all_models.json")
     ds_final.to_json(final_path, force_ascii=False)
     print(f"[Saved final merged] {final_path}")
 else:
