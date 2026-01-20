@@ -23,6 +23,93 @@ from types import MethodType
 
 '''
 import re
+
+
+'''
+LAPE mask neuron
+
+'''
+
+def get_mask_neuron_model(model, activation_mask_path, need_lang, is_llama= True):
+
+    # get state_dict 
+    state_dict = model.state_dict()
+    
+    if activation_mask_path:
+        activation_masks = torch.load(activation_mask_path)
+    else:
+        activation_masks = [None]
+    
+    final_output = []
+    if is_llama:
+        languages = ["en", "zh", "fr", "es", "vi", "id", "ja"]
+    else:
+        languages = ["en", "zh", "fr", "es", "vi", "id"]
+    
+    need_lang = [need_lang]#['en', 'zh', 'vi']
+    
+    for activation_mask, mask_lang in zip(activation_masks, languages):
+    
+        if mask_lang not in need_lang:continue
+            
+        print(f'get mask =====lang:{mask_lang}=====')
+    
+        
+        if activation_mask:
+            def factory(mask):
+                def llama_forward(self, x):
+                    gate_up, _ = self.gate_up_proj(x)  # b, l, 2i
+                    i = gate_up.size(-1)
+                    activation = F.silu(gate_up[:, :, : i // 2])
+                    activation.index_fill_(2, mask, 0)
+                    x = activation * gate_up[:, :, i // 2 :]
+                    x, _ = self.down_proj(x)
+                    return x
+                def llama_forward_split(self, x):
+                    gate_ = self.gate_proj(x)  # b, l, 2i
+                    i = gate_.size(-1)
+                    activation = F.silu(gate_)
+                    #activation.index_fill_(2, mask, 0)
+
+                    # test
+                    print(activation.shape)
+                    activation.index_fill_(2, torch.tensor(list(range(activation.shape[1]))), 0 )
+                    x = activation * self.up_proj(x)
+                    x = self.down_proj(x)
+                    return x
+    
+                def bloom_forward(self, x: torch.Tensor):
+                    x, _ = self.dense_h_to_4h(x)
+                    x = self.gelu_impl(x)
+                    x.index_fill_(2, mask, 0)
+                    x, _ = self.dense_4h_to_h(x)
+                    return x
+    
+                if is_llama:
+                    return llama_forward
+                else:
+                    return bloom_forward
+    
+            for i, layer_mask in enumerate(activation_mask): 
+                #print('ilayer:',i, layer_mask)
+                if is_llama:
+                    #obj = model.llm_engine.driver_worker.model_runner.model.model.layers[i].mlp
+                    
+                    # just mask neuron
+                    # only masj gate proj
+                    
+                    #model.model.layers[i].mlp.gate_proj = 
+                    state_dict[f'model.layers.{i}.mlp.gate_proj.weight'][layer_mask,:] = 0
+                    
+                    
+                else:
+                    #obj = model.llm_engine.driver_worker.model_runner.model.transformer.h[i].mlp
+                    assert 1==0
+                #obj.forward = MethodType(factory(layer_mask.to('cuda')), obj)
+    return model
+
+
+
 def get_mask_neuron_model_LRP(model, activation_mask_dict, is_llama =True):
 
         # get state_dict 
