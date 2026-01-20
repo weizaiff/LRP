@@ -56,14 +56,21 @@ is_llama = True# bool(model_path.find('llama') >= 0)
 config = AutoConfig.from_pretrained(model_path,trust_remote_code=True)
 
 # llama2 7b base
-save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260119_newrandom5000samples_cal_llama2_7b_base_random_mask_2"
+#save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260119_newrandom5000samples_cal_llama2_7b_base_random_mask_2"
+
+
 
 #neuron path
 #BASE = "/root/autodl-fs/LRP_kur_res/20260115_newrandom5000samples_cal_llama2_7b_base"
 #random  mask time0 
-BASE = "/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time2_"
+#BASE = "/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time2_"
+
+# random global mask time0 
+BASE="/root/autodl-fs/LRP_kur_res/20260120_global_random5000samples_llama2_7b_base_time0_"
+save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260120_newrandom5000samples_cal_llama2_7b_base_globalrandom_mask_0"
 
 IS_ADD_LAPE_MODEL_LIST = False #是否加上LAPE的open-ended测试
+IS_ADD_ORG_MODEL = False
 
 # ======== Build model list (auto) ========
 #BASE = "/root/autodl-fs/LRP_kur_res/20251204_5000samples_cal_llama2_7b_chat"
@@ -123,7 +130,10 @@ dt = datetime.now().strftime("%Y%m%d")
 
 
 def build_model_list(llm, base=BASE):
-    ml = []#[(llm, "org_model")]
+    if IS_ADD_ORG_MODEL:
+        ml = [(llm, "org_model")]
+    else:
+        ml = []#[(llm, "org_model")]
     for fname in sorted(os.listdir(base)):
         if fname.endswith(".pt") and not fname.startswith("all_mlp"):
             path = f"{base}/{fname}"
