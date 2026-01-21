@@ -97,7 +97,7 @@ def main(judege_path):
     
     df_judge_res_no_mask = df_judge_res.loc[df_judge_res['method_name'] != 'mask'].reset_index(drop=True)
     
-    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 2.5)
+    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 1.5)
     
     # res_score_mean
     final_score={}
@@ -122,6 +122,11 @@ def main(judege_path):
     # random
     langspecf1_utils.show_result('th_1_selected_LRP_kur_res_random_zscore', res_acuall_score, res_score)
 
+    # global random
+    langspecf1_utils.show_result('th_1_selected_LRP_kur_res_global_random_zscore', res_acuall_score, res_score)
+
+    # full random mask 'fully_random_mask_zscore'
+    langspecf1_utils.show_result('fully_random_mask_zscore', res_acuall_score, res_score)
 
 if __name__=='__main__':
     
@@ -142,9 +147,12 @@ if __name__=='__main__':
     #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260115_newrandom5000samples_cal_llama2_7b_base/20260119_generation_all_models.json_gpt4o.json'
 
     #20260119 new random 5000samples & random mask 3time & judge 3time
-    judege_path ='/root/autodl-fs/LRP/open_ended_data_generation/20260119_newrandom5000samples_cal_llama2_7b_base_random_mask_0_1_2_total/20260119_generation_all_models_random_mask0_1_2.json_gpt4o_judge3times.json'
+    #judege_path ='/root/autodl-fs/LRP/open_ended_data_generation/20260119_newrandom5000samples_cal_llama2_7b_base_random_mask_0_1_2_total/20260119_generation_all_models_random_mask0_1_2.json_gpt4o_judge3times.json'
+    ##20260119 new random 5000samples & random mask 3time & global random
+    #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260120_newrandom5000samples_cal_llama2_7b_base_globalrandom_mask_0/20260120_all_method_add_global_random_ans4judge.json_gpt4o_.json'
 
-
+    # 20260121 new random 5000samples & random mask 3time & global random & full random 3times
+    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260121_newrandom5000samples_cal_llama2_7b_base_fullrandom_mask_0/20260121_all_method_add_global_random_And_full_random.json_gpt4o_.json'
     
     main(judege_path)
 

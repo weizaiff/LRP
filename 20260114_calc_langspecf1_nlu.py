@@ -218,12 +218,84 @@ lang2targettask={
 }
 
 
+'''
+    20260121
+
+
+'''
+org_model_task_result = {
+    'MMLU':0.457911,
+    'C-eval':0.34695393759286774,
+    'Belebele_vi':0.3722
+}
+LAPE_diff_mask={
+    'en':{
+    'MMLU':0.4576,
+    'C-eval':0.3350668647845468,
+    'Belebele_vi':0.3711
+},
+    'vi':{
+    'MMLU':0.4553,
+    'C-eval':0.33803863298662706,
+    'Belebele_vi':0.3833
+},
+    'zh':{
+    'MMLU':0.4589089873237431,
+    'C-eval':0.3410104011887073,
+    'Belebele_vi':0.3778
+}
+}
+
+LRP_diff_mask={
+    'en':{
+    'MMLU': 0.40948582822959695,
+    'C-eval':0.30237741456166417,
+    'Belebele_vi':0.2688888888888889
+},
+    'vi':{
+    'MMLU':0.36725537672696196,
+    'C-eval':0.28826151560178304,
+    'Belebele_vi':0.22777777777777777
+},
+    'zh':{
+    'MMLU':0.36782509614015096,
+    'C-eval':0.287518573551263,
+    'Belebele_vi':0.22333333333333333
+}
+}
+
+
+LRP_random_diff_mask={
+    'en':{
+    'MMLU': 0.42436974789915966,
+    'C-eval':0.3098068350668648,
+    'Belebele_vi':0.2877777777777778
+},
+    'vi':{
+    'MMLU':0.42266058965959263,
+    'C-eval':0.286775631500742,
+    'Belebele_vi':0.29888888888888887
+},
+    'zh':{
+    'MMLU':0.4333,
+    'C-eval':0.31054977711738485,
+    'Belebele_vi':0.3388888888888889
+}
+}
+
+    
 exp_map=[
+    # before
+    #('baseNeuron_baseGeneration_LAPE', LAPE_diff_mask, org_model_task_result),
+    #('baseNeuron_baseGeneration_LRP', LRP_diff_mask, org_model_task_result),
+    #('baseNeuron_baseGeneration_randommask', LRP_random_diff_mask, org_model_task_result),
+    #('baseNeuron_chatGeneration_LAPE', LAPE_diff_mask_baseneuron_maskchat, org_model_task_result_baseneuron_maskchat),
+    #('baseNeuron_chatGeneration_LRP', LRP_diff_mask_baseneuron_maskchat, org_model_task_result_baseneuron_maskchat),
+
+    # 20260121
     ('baseNeuron_baseGeneration_LAPE', LAPE_diff_mask, org_model_task_result),
     ('baseNeuron_baseGeneration_LRP', LRP_diff_mask, org_model_task_result),
     ('baseNeuron_baseGeneration_randommask', LRP_random_diff_mask, org_model_task_result),
-    ('baseNeuron_chatGeneration_LAPE', LAPE_diff_mask_baseneuron_maskchat, org_model_task_result_baseneuron_maskchat),
-    ('baseNeuron_chatGeneration_LRP', LRP_diff_mask_baseneuron_maskchat, org_model_task_result_baseneuron_maskchat),
     
 ]
 
