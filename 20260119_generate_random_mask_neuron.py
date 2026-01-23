@@ -33,7 +33,7 @@ if False:
 
 # 20260123
 
-base_save_neuron_dir = '/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_random_neuron_time{}_/'
+base_save_neuron_dir = '/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time{}_/'
 #org_model_path ='/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-chat-hf
 
 org_model_path ='/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf/' # base model 
@@ -42,9 +42,9 @@ is_llama=True
 model, tokenizer = load_model(org_model_path)
 config = AutoConfig.from_pretrained(org_model_path)
 activation_mask_path_map = {
-        'en': '/root/autodl-fs/LRP_kur_res/20260115_newrandom5000samples_cal_llama2_7b_base/th_1_selected_LRP_kur_res_en_zscore.pt',
-        'vi': '/root/autodl-fs/LRP_kur_res/20260115_newrandom5000samples_cal_llama2_7b_base/th_1_selected_LRP_kur_res_vi_zscore.pt',
-        'zh': '/root/autodl-fs/LRP_kur_res/20260115_newrandom5000samples_cal_llama2_7b_base/th_1_selected_LRP_kur_res_zh_zscore.pt'
+        'en': '/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_en_zscore.pt',
+        'vi': '/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_vi_zscore.pt',
+        'zh': '/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_zh_zscore.pt'
     }
 
 

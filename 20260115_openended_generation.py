@@ -70,8 +70,17 @@ config = AutoConfig.from_pretrained(model_path,trust_remote_code=True)
 #save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260120_newrandom5000samples_cal_llama2_7b_base_globalrandom_mask_0"
 
 # full random mask
-BASE="/root/autodl-fs/LRP_kur_res/20260121_fully_random_time2_"
-save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260121_newrandom5000samples_cal_llama2_7b_base_fullrandom_mask_2"
+#BASE="/root/autodl-fs/LRP_kur_res/20260121_fully_random_time2_"
+#save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260121_newrandom5000samples_cal_llama2_7b_base_fullrandom_mask_2"
+
+#20250123 new vi zh
+#BASE="/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh"
+#save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh"
+
+
+#20250123 new random vi zh
+BASE="/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_"
+save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_"
 
 
 IS_ADD_LAPE_MODEL_LIST = False #是否加上LAPE的open-ended测试

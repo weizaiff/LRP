@@ -188,10 +188,10 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
         #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
 
         # actually mean drop
-        #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
+        max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
 
         #actually sum
-        max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+        #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
         
         EPS =1e-12
         precision = target_drop / (target_drop + max_other_drop + EPS)
