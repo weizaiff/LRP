@@ -97,7 +97,7 @@ def main(judege_path):
     
     df_judge_res_no_mask = df_judge_res.loc[df_judge_res['method_name'] != 'mask'].reset_index(drop=True)
     
-    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 2.5)
+    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 1)
     
     # res_score_mean
     final_score={}
@@ -155,8 +155,13 @@ if __name__=='__main__':
     #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260121_newrandom5000samples_cal_llama2_7b_base_fullrandom_mask_0/20260121_all_method_add_global_random_And_full_random.json_gpt4o_.json'
 
     # 20260123 new vi zh random 3times
-    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/0260123_generation_all_models_org_lape_random_all.json_gpt4o_3times.json'
-    
+    #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/0260123_generation_all_models_org_lape_random_all.json_gpt4o_3times.json'
+
+    # 20260127 new vi 
+    #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/20260127all_gene_and_random.json_gpt4o.json'
+    # 20260127 new vi 3times
+    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/20260127_generation_all_modelsAnd_random3times.json_gpt4o.json'
+
     main(judege_path)
 
 

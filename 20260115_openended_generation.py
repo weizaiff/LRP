@@ -79,8 +79,17 @@ config = AutoConfig.from_pretrained(model_path,trust_remote_code=True)
 
 
 #20250123 new random vi zh
-BASE="/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_"
-save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_"
+#BASE="/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_"
+#save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_"
+
+
+#20250127 new vi 
+#BASE="/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh"
+#save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh"
+
+#20250127 new vi random
+BASE="/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time2_"
+save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time2_"
 
 
 IS_ADD_LAPE_MODEL_LIST = False #是否加上LAPE的open-ended测试

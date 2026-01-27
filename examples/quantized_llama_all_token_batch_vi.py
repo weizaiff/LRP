@@ -177,14 +177,14 @@ exp_setting=[
     }
 ]
 
-# 20260123 llama2-7b-hf new vi
+# 20260123 llama2-7b-hf new vi + 20260127 c4===> wanjuan
 exp_setting=[
     
     {
         'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf',
         'language':'vi',
         'prefix_output_dir':'/root/autodl-fs/output_grad/20260123_newrandom5000samples_quantied_llama2_base_v3',
-        'data_path':'/root/autodl-fs/LRP_data/all_data_sampling_ver3/c4_vi_uniform_5k.jsonl'
+        'data_path':'/root/autodl-fs/LRP_data/all_data_sampling_ver3/wanjuan_vi_uniform_5k.jsonl'
     }
 ]
 

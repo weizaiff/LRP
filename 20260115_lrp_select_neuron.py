@@ -10,7 +10,7 @@ import os
 
 # 20260123
 input_dir_prefix='/root/autodl-fs/output_grad/20260123_newrandom5000samples_quantied_llama2_base_v3/Llama-2-7b-hf/' 
-out_dir_prefix='/root/autodl-fs/LRP_kur_res/20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/'
+out_dir_prefix='/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/'
 os.makedirs(out_dir_prefix+'/', exist_ok=True)
 
 
