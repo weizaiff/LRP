@@ -186,6 +186,16 @@ exp_setting=[
         'data_path':'/root/autodl-fs/LRP_data/all_data_sampling_ver3/skypile_zh_uniform_5k.jsonl'
     }
 ]
+# 20260128 new 1k 
+exp_setting=[
+    
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf',
+        'language':'zh',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/20260128_newrandom1000samples_llama2_base',
+        'data_path':'/root/autodl-fs/LRP_data/all_data_sampling_ver3/1000_samples/zh_uniform_1k.jsonl'
+    }
+]
 
 
 

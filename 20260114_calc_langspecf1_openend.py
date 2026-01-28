@@ -97,7 +97,7 @@ def main(judege_path):
     
     df_judge_res_no_mask = df_judge_res.loc[df_judge_res['method_name'] != 'mask'].reset_index(drop=True)
     
-    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 1)
+    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 2.5)
     
     # res_score_mean
     final_score={}

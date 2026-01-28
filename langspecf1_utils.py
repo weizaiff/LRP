@@ -1,5 +1,5 @@
 import json
-
+import numpy as np
 
 def get_analysis_res(ds_judge_res):
     df_judge_res = ds_judge_res['train'].to_pandas()
@@ -183,32 +183,36 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
             Alpha=0.7 sigmoid(alpha*exp(drop_target_rate) - (1-alpha)*exp(drop_other_rate))
 
         '''
-        org_target = lang_score_baseline[tmp_taget_lang]
-        target_drop = tmp_drop[tmp_taget_lang]
-        #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
-
-        # actually mean drop
-        #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
-
-        #actually sum
-        max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
-        
-        EPS =1e-12
-        precision = target_drop / (target_drop + max_other_drop + EPS)
-        recall = target_drop / (org_target + EPS)
-        f1 = (1+ beta**2) * precision * recall / (precision + recall* beta**2 + EPS)
+        if True:
+            #lang-specific
+            org_target = lang_score_baseline[tmp_taget_lang]
+            target_drop = tmp_drop[tmp_taget_lang]
+            #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
     
+            # actually mean drop
+            max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
     
-        res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f1
-        res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
+            #actually sum
+            #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+            
+            EPS =1e-12
+            precision = target_drop / (target_drop + max_other_drop + EPS)
+            recall = target_drop / (org_target + EPS)
+            f1 = (1+ beta**2) * precision * recall / (precision + recall* beta**2 + EPS)
         
+        
+            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f1
+            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
+            
     
         '''
             sigmoid(alpha*exp(drop_target) - (1-alpha)*exp(drop_other))
     
         '''
         if False:
-            alpha=0.5 
+            #1. Alpha=0.7 sigmoid(alpha*exp(drop_target_rate) - (1-alpha)*exp(drop_other_rate))
+
+            alpha=0.7 
             def sigmoid(x):
                 return 1/(1 + np.exp(-x))
         
@@ -221,9 +225,10 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
             '''
                 res_score[tmp_taget_lang] = alpha*(2**drop_target-1) - (1- alpha)*(2**abs(drop_other_mean)-1)
             '''
-            alpha=0.8
-            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = alpha*(2**(drop_target)-1) - (1- alpha)*(2**abs(drop_other_mean)-1)
-            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
+            if False:
+                alpha=0.8
+                res_score[df_tmp['method_name'][0]][tmp_taget_lang] = alpha*(2**(drop_target)-1) - (1- alpha)*(2**abs(drop_other_mean)-1)
+                res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
         
             
     
