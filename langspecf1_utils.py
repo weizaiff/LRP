@@ -134,66 +134,134 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
             #tmp_drop[ikey] = lang_score_baseline[ikey] - lang_score_tmp[ikey]
             # drop rate
             #tmp_drop[ikey] = (lang_score_baseline[ikey] - lang_score_tmp[ikey])/lang_score_baseline[ikey]
-            
-            tmp_drop[ikey] = max(lang_score_baseline[ikey] - lang_score_tmp[ikey], 0)
+
+            # drop ==max 0
+            #tmp_drop[ikey] = max(lang_score_baseline[ikey] - lang_score_tmp[ikey], 0)
+
+            # drop rate max ==0
+            tmp_drop[ikey] = max((lang_score_baseline[ikey] - lang_score_tmp[ikey])/lang_score_baseline[ikey], 0)
     
         tmp_taget_lang = df_tmp['mask_neuron_lang'][0]
         lang_list = ['en', 'vi', 'zh']
         lang_list.remove(tmp_taget_lang)
     
-        # LPS
-        #LPS = drop(target) / mean(drop(other)) * mean(drop)
-        #LPS = tmp_drop[tmp_taget_lang]/((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)*(sum(tmp_drop.values())/3)
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = LPS
+        if False:
+            #lang-specific ==== drop rate
+            org_target = lang_score_baseline[tmp_taget_lang]
+            target_drop = tmp_drop[tmp_taget_lang]
+            #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
     
-        # sigmoid LPS
-        k = 2
-        f = lambda x: 2/(1+np.exp(-k*x))
-        # sigmoid(drop_target) /sigmoid(mean_drop_other) * sigmoid(all_mean_drop) 
+            # actually mean drop
+            #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
+    
+            #actually sum
+            max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+            
+            EPS =1e-12
+            precision = target_drop / (target_drop + max_other_drop + EPS)
+            #recall = target_drop / (org_target + EPS)
+
+            # for drop rate calc
+            recall = target_drop+ EPS #/ (org_target + EPS)
+            f1 = (1+ beta**2) * precision * recall / (precision  + recall* beta**2+ EPS)
         
-        #LPS_sig = f(tmp_drop[tmp_taget_lang]) / f(((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)) #* f(sum(tmp_drop.values())/3)
         
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = LPS_sig
-    
-        #res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] = lang_score_tmp
-    
-    
-        # only two part 
-        #sigmoid(drop_target - mean_drop_other) 
-        # 3 2 =1
-        # -3 -4 =1
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f((tmp_drop[tmp_taget_lang]) -((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2))
-        #res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
-    
-        #sigmoid(drop_target) - sigmoid(mean_drop_other) 
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f(tmp_drop[tmp_taget_lang]) -f((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)
-        #res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
-    
-        '''
-             precision = target_drop / (target_drop + max_other_drop + EPS)
-                recall = target_drop / (org_model_task_result[target_task] + EPS)
-                 f1 = 2 * precision * recall / (precision + recall + EPS)
-    
-                *_drop = max(org_drop, 0)#只考虑指标掉了的情况，如果指标增加了，说明没有找到暂时不考虑
-    
-        '''
+            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f1
+            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
 
-
-        '''
-            Alpha=0.7 sigmoid(alpha*exp(drop_target_rate) - (1-alpha)*exp(drop_other_rate))
-
-        '''
         if True:
+            '''
+                罗辑回归的metric
+                other = max(other1, other2)      # 或 mean
+                tau = 0.08                       # 容忍 other 掉 8%（你可以改 0.05~0.15）
+                k = 25                           # 斜率，越大越像硬阈值
+                
+                penalty = 1 / (1 + np.exp(k * (other - tau)))   # other<tau ~1, other>tau 快速掉
+                score = f * penalty
+            '''
+            #lang-specific ==== drop rate
+            org_target = lang_score_baseline[tmp_taget_lang]
+            target_drop = tmp_drop[tmp_taget_lang]
+            #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
+    
+            # actually mean drop
+            #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
+    
+            #actually sum
+            max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+            
+            EPS =1e-12
+            precision = target_drop / (target_drop + max_other_drop + EPS)
+            #recall = target_drop / (org_target + EPS)
+
+            # for drop rate calc
+            recall = target_drop+ EPS #/ (org_target + EPS)
+            #f1 = (1+ beta**2) * precision * recall / (precision  + recall* beta**2+ EPS)
+
+
+            other = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])      # 或 mean
+            tau = 0.08                       # 容忍 other 掉 8%（你可以改 0.05~0.15）
+            k = 25                           # 斜率，越大越像硬阈值
+            
+            penalty = 1 / (1 + np.exp(k * (other - tau)))   # other<tau ~1, other>tau 快速掉
+            
+            
+            f = (1+beta**2) * precision * recall / (precision + beta**2 * recall + EPS)
+            f1 = f * penalty
+        
+        
+            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f1
+            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
+            
+        if True:
+            '''
+                gamma = 4.0  # 先从 3~6 试
+                penalty = np.exp(-gamma * max_other_drop)  # other_drop大就爆扣
+                
+                f = (1+beta**2) * precision * recall / (precision + beta**2 * recall + EPS)
+                f1 = f * penalty
+            '''
+            #lang-specific ==== drop rate
+            org_target = lang_score_baseline[tmp_taget_lang]
+            target_drop = tmp_drop[tmp_taget_lang]
+            #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
+    
+            # actually mean drop
+            #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
+    
+            #actually sum
+            max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+            
+            EPS =1e-12
+            precision = target_drop / (target_drop + max_other_drop + EPS)
+            #recall = target_drop / (org_target + EPS)
+
+            # for drop rate calc
+            recall = target_drop+ EPS #/ (org_target + EPS)
+            #f1 = (1+ beta**2) * precision * recall / (precision  + recall* beta**2+ EPS)
+
+            gamma = 6  # 先从 3~6 试
+            penalty = np.exp(-gamma * max_other_drop)  # other_drop大就爆扣
+            
+            f = (1+beta**2) * precision * recall / (precision + beta**2 * recall + EPS)
+            f1 = f * penalty
+        
+        
+            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f1
+            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
+            
+            
+        if False:
             #lang-specific
             org_target = lang_score_baseline[tmp_taget_lang]
             target_drop = tmp_drop[tmp_taget_lang]
             #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
     
             # actually mean drop
-            max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
+            #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
     
             #actually sum
-            #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+            max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
             
             EPS =1e-12
             precision = target_drop / (target_drop + max_other_drop + EPS)

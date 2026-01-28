@@ -97,7 +97,7 @@ def main(judege_path):
     
     df_judge_res_no_mask = df_judge_res.loc[df_judge_res['method_name'] != 'mask'].reset_index(drop=True)
     
-    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 2.5)
+    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 1)
     
     # res_score_mean
     final_score={}
@@ -115,18 +115,32 @@ def main(judege_path):
     
     
     langspecf1_utils.show_result('LAPE', res_acuall_score, res_score)
+
+
+    print('first five:')
+    for imt_name, itmp_score in sorted(final_score.items(), key = lambda x: x[1], reverse=True )[:5]:
+        langspecf1_utils.show_result(imt_name, res_acuall_score, res_score)
     
     
-    langspecf1_utils.show_result('th_1_selected_LRP_kur_res_zscore', res_acuall_score, res_score)
+    #langspecf1_utils.show_result('th_0.25_selected_LRP_kur_res_zscore_margin_selected', res_acuall_score, res_score)
+
+    #langspecf1_utils.show_result('th_0.5_selected_LRP_kur_res_zscore_margin_selected', res_acuall_score, res_score)
+
+    #langspecf1_utils.show_result('th_1_selected_LRP_kur_res_zscore_margin_selected', res_acuall_score, res_score)
+
+    #langspecf1_utils.show_result('th_0_selected_LRP_kur_res_zscore', res_acuall_score, res_score)
+
+    #langspecf1_utils.show_result('th_0.5_selected_LRP_kur_res_zscore', res_acuall_score, res_score)
+
 
     # random
-    langspecf1_utils.show_result('th_1_selected_LRP_kur_res_random_zscore', res_acuall_score, res_score)
+    #langspecf1_utils.show_result('th_1_selected_LRP_kur_res_random_zscore', res_acuall_score, res_score)
 
     # global random
-    langspecf1_utils.show_result('th_1_selected_LRP_kur_res_global_random_zscore', res_acuall_score, res_score)
+    #langspecf1_utils.show_result('th_1_selected_LRP_kur_res_global_random_zscore', res_acuall_score, res_score)
 
     # full random mask 'fully_random_mask_zscore'
-    langspecf1_utils.show_result('fully_random_mask_zscore', res_acuall_score, res_score)
+    #langspecf1_utils.show_result('fully_random_mask_zscore', res_acuall_score, res_score)
 
 if __name__=='__main__':
     
@@ -160,7 +174,9 @@ if __name__=='__main__':
     # 20260127 new vi 
     #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/20260127all_gene_and_random.json_gpt4o.json'
     # 20260127 new vi 3times
-    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/20260127_generation_all_modelsAnd_random3times.json_gpt4o.json'
+    #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/20260127_generation_all_modelsAnd_random3times.json_gpt4o.json'
+    #20260128 new search all
+    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260128_newrandom1000samples_llama2_base/20260128_all_and_org_LAPE.json_gpt4o.json'
 
     main(judege_path)
 
