@@ -14,8 +14,14 @@ from transformers import AutoConfig
 
 from open_ended_utils import *
 
-base_save_neuron_dir = '/root/autodl-fs/LRP_kur_res/20260121_fully_random_time{}_/'
+if False:
+    base_save_neuron_dir = '/root/autodl-fs/LRP_kur_res/20260121_fully_random_time{}_/'
+    org_model_path = '/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf/'
+
+# 20260304 arr paper reproduce
+base_save_neuron_dir = '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_fullly_random_neuron_time{}_/'
 org_model_path = '/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf/'
+
 is_llama = True
 
 model, tokenizer = load_model(org_model_path)
