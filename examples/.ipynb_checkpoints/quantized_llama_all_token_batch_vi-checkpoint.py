@@ -198,6 +198,17 @@ exp_setting=[
         'data_path':'/root/autodl-fs/LRP_data/all_data_sampling_ver3/1000_samples/vi_uniform_1k.jsonl'
     }
 ]
+# 20260304 ARR paper 1k  reproduce
+
+exp_setting=[
+    
+    {
+        'model':'/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf',
+        'language':'vi',
+        'prefix_output_dir':'/root/autodl-fs/output_grad/2026304_arr_paper_1000samples_llama2_base',
+        'data_path':'/root/autodl-fs/LRP_data/vi_random_1000.jsonl'
+    }
+]
 
 
 for iexp_map in exp_setting:
