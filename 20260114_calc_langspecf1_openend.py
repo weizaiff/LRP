@@ -176,9 +176,14 @@ if __name__=='__main__':
     # 20260127 new vi 3times
     #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/20260127_generation_all_modelsAnd_random3times.json_gpt4o.json'
     #20260128 new search all
-    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260128_newrandom1000samples_llama2_base/20260128_all_and_org_LAPE.json_gpt4o.json'
+    #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260128_newrandom1000samples_llama2_base/20260128_all_and_org_LAPE.json_gpt4o.json'
 
+    # 20260304 arr paper reproduce
+    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260304_arr_paper_llama2_7b_base_/20260304_generation_all_models.json_gpt4o.json'
+    
     main(judege_path)
+
+
 
 
 

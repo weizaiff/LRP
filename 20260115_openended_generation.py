@@ -93,12 +93,17 @@ config = AutoConfig.from_pretrained(model_path,trust_remote_code=True)
 
 # 20260128 new1000 samples th search
 
-BASE="/root/autodl-fs/LRP_kur_res/20260128_newrandom1000samples_llama2_base"
-save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260128_newrandom1000samples_llama2_base"
+#BASE="/root/autodl-fs/LRP_kur_res/20260128_newrandom1000samples_llama2_base"
+#save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260128_newrandom1000samples_llama2_base"
+
+# 20260304 arr 1000 samples  reproduce
+
+BASE="/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_"
+save_dir = "/root/autodl-fs/LRP/open_ended_data_generation/20260304_arr_paper_llama2_7b_base_"
 
 
-IS_ADD_LAPE_MODEL_LIST = False #是否加上LAPE的open-ended测试
-IS_ADD_ORG_MODEL = False
+IS_ADD_LAPE_MODEL_LIST = True #是否加上LAPE的open-ended测试
+IS_ADD_ORG_MODEL = True
 
 # ======== Build model list (auto) ========
 #BASE = "/root/autodl-fs/LRP_kur_res/20251204_5000samples_cal_llama2_7b_chat"
