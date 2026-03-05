@@ -97,7 +97,7 @@ def main(judege_path):
     
     df_judge_res_no_mask = df_judge_res.loc[df_judge_res['method_name'] != 'mask'].reset_index(drop=True)
     
-    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 2.5)
+    res_score, res_acuall_score, lang_score_baseline = langspecf1_utils.calc_metric(df_judge_res, result_dict, beta = 1)
     
     # res_score_mean
     final_score={}
@@ -185,6 +185,9 @@ if __name__=='__main__':
     #judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260304_arr_paper_llama2_7b_base_/20260304_generation_all_models_add1time_random.json_gpt4o.json'
     #20260304 arr paper reproduce random - add fully random
     judege_path = '/root/autodl-fs/LRP/open_ended_data_generation/20260304_arr_paper_llama2_7b_base_/20260304_generation_all_models_add1time_random_A_fully_random.json_gpt4o.json'
+    # 20260305 arr paper reproduce random - add fully random & kurosis th search
+    judege_path='/root/autodl-fs/LRP/open_ended_data_generation/20260304_arr_paper_llama2_7b_base_/20260304_generation_all_models_add1time_random_A_fully_random_add_new_kurth_search.json_gpt4o.json'
+    
     main(judege_path)
 
 

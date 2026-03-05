@@ -220,6 +220,19 @@ ds_list = []
 
 print(f"[INFO] Total models: {len(model_list)}")
 
+
+def split_list(lst, n):
+    k, m = divmod(len(lst), n)
+    return [lst[i*k + min(i,m):(i+1)*k + min(i+1,m)] for i in range(n)]
+
+
+parts = split_list(model_list, 3)
+
+print('get parts[1]')
+model_list=parts[1]
+
+print('len& model_list:', len(model_list), model_list)
+
 model_list_bar = tqdm(total=len(model_list), desc="Model Progress")
 
 # ======== Running ========

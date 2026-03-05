@@ -532,40 +532,17 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
             #tmp_drop[ikey] = lang_score_baseline[ikey] - lang_score_tmp[ikey]
             # drop rate
             #tmp_drop[ikey] = (lang_score_baseline[ikey] - lang_score_tmp[ikey])/lang_score_baseline[ikey]
-            
-            tmp_drop[ikey] = max(lang_score_baseline[ikey] - lang_score_tmp[ikey], 0)
+
+            # max
+            #tmp_drop[ikey] = max(lang_score_baseline[ikey] - lang_score_tmp[ikey], 0)
+
+            # max drop rate
+            tmp_drop[ikey] = max((lang_score_baseline[ikey] - lang_score_tmp[ikey])/lang_score_baseline[ikey], 0)
     
         tmp_taget_lang = df_tmp['mask_neuron_lang'][0]
         lang_list = ['en', 'vi', 'zh']
         lang_list.remove(tmp_taget_lang)
-    
-        # LPS
-        #LPS = drop(target) / mean(drop(other)) * mean(drop)
-        #LPS = tmp_drop[tmp_taget_lang]/((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)*(sum(tmp_drop.values())/3)
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = LPS
-    
-        # sigmoid LPS
-        k = 2
-        f = lambda x: 2/(1+np.exp(-k*x))
-        # sigmoid(drop_target) /sigmoid(mean_drop_other) * sigmoid(all_mean_drop) 
-        
-        #LPS_sig = f(tmp_drop[tmp_taget_lang]) / f(((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)) #* f(sum(tmp_drop.values())/3)
-        
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = LPS_sig
-    
-        #res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] = lang_score_tmp
-    
-    
-        # only two part 
-        #sigmoid(drop_target - mean_drop_other) 
-        # 3 2 =1
-        # -3 -4 =1
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f((tmp_drop[tmp_taget_lang]) -((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2))
-        #res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
-    
-        #sigmoid(drop_target) - sigmoid(mean_drop_other) 
-        #res_score[df_tmp['method_name'][0]][tmp_taget_lang] = f(tmp_drop[tmp_taget_lang]) -f((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)
-        #res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
+        assert len(lang_list) == 2
     
         '''
              precision = target_drop / (target_drop + max_other_drop + EPS)
@@ -580,14 +557,14 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
         #max_other_drop = max(tmp_drop[lang_list[0]], tmp_drop[lang_list[1]])
 
         # actually mean drop
-        #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
+        max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])/2
 
         # sum
-        max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
+        #max_other_drop = sum([tmp_drop[lang_list[0]], tmp_drop[lang_list[1]]])
         
         EPS =1e-12
         precision = target_drop / (target_drop + max_other_drop + EPS)
-        recall = target_drop / (org_target + EPS)
+        recall = target_drop / 1 #(org_target + EPS)
         f1 = (1+ beta**2) * precision * recall / (precision + recall* beta**2 + EPS)
     
     
@@ -595,36 +572,7 @@ def calc_metric(df_judge_res,result_dict, beta = 1 ):
         res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
         
     
-        '''
-            sigmoid(alpha*exp(drop_target) - (1-alpha)*exp(drop_other))
-    
-        '''
-        if False:
-            alpha=0.5 
-            def sigmoid(x):
-                return 1/(1 + np.exp(-x))
         
-            drop_target = tmp_drop[tmp_taget_lang]
-            drop_other_mean = (tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2
-            
-            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = sigmoid(alpha*np.exp(drop_target) - (1- alpha)*np.exp(drop_other_mean))
-            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
-        
-            '''
-                res_score[tmp_taget_lang] = alpha*(2**drop_target-1) - (1- alpha)*(2**abs(drop_other_mean)-1)
-            '''
-            alpha=0.8
-            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = alpha*(2**(drop_target)-1) - (1- alpha)*(2**abs(drop_other_mean)-1)
-            res_acuall_score[df_tmp['method_name'][0]][tmp_taget_lang] =  lang_score_tmp
-        
-            
-    
-        if False:
-            #LPS★ = (drop(target) - mean(drop(other))) * drop(target)
-            drop_target = tmp_drop[tmp_taget_lang]
-            mean_drop_other = ((tmp_drop[lang_list[0]] + tmp_drop[lang_list[1]])/2)
-            LPS_star = (drop_target - mean_drop_other) * drop_target
-            res_score[df_tmp['method_name'][0]][tmp_taget_lang] = LPS_star
 
     return res_score, res_acuall_score, lang_score_baseline
 
