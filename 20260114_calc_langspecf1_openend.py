@@ -118,7 +118,7 @@ def main(judege_path):
 
 
     print('first five:')
-    for imt_name, itmp_score in sorted(final_score.items(), key = lambda x: x[1], reverse=True )[:5]:
+    for imt_name, itmp_score in sorted(final_score.items(), key = lambda x: x[1], reverse=True ):
         langspecf1_utils.show_result(imt_name, res_acuall_score, res_score)
     
     

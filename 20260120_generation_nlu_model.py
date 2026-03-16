@@ -76,42 +76,64 @@ model, tokenizer = load_model(org_model_path)
 config = AutoConfig.from_pretrained(org_model_path)
 
 # LRP model
-if True:
-    if False: #random
-        save_dir= '/root/autodl-tmp/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_{}'
-        activation_mask_path_map = {
-                'en': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_/th_1_selected_LRP_kur_res_random_en_zscore.pt',
-                'vi': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_/th_1_selected_LRP_kur_res_random_vi_zscore.pt',
-                'zh': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_/th_1_selected_LRP_kur_res_random_zh_zscore.pt'
-            }
-        lang_list = ['en', 'vi', 'zh']
-        #lang_list = ['en']
-
+if False:
+    if True:
+        if False: #random
+            save_dir= '/root/autodl-tmp/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_{}'
+            activation_mask_path_map = {
+                    'en': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_/th_1_selected_LRP_kur_res_random_en_zscore.pt',
+                    'vi': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_/th_1_selected_LRP_kur_res_random_vi_zscore.pt',
+                    'zh': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_random_neuron_time0_/th_1_selected_LRP_kur_res_random_zh_zscore.pt'
+                }
+            lang_list = ['en', 'vi', 'zh']
+            #lang_list = ['en']
+    
+        else:
+            save_dir= '/root/autodl-tmp/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_{}'
+            activation_mask_path_map = {
+                    'en': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_en_zscore.pt',
+                    'vi': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_vi_zscore.pt',
+                    'zh': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_zh_zscore.pt'
+                }
+            lang_list = ['en', 'vi', 'zh']
+            #lang_list = ['en']
+        
+        save_LRP_model(model, save_dir, activation_mask_path_map, lang_list)
     else:
-        save_dir= '/root/autodl-tmp/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh_{}'
+    
+        # LRP random-mask model
+        save_dir= '/root/autodl-tmp/20250120_LRP_llama2_7b_base_BaseNeuron_random_BaseMask_lang_{}'
         activation_mask_path_map = {
-                'en': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_en_zscore.pt',
-                'vi': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_vi_zscore.pt',
-                'zh': '/root/autodl-fs/LRP_kur_res/20260127_vi_v2_20260123_newrandom5000samples_cal_llama2_7b_base_v3_new_vi_zh/th_1_selected_LRP_kur_res_zh_zscore.pt'
+                'en': '/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_en_zscore.pt',
+                'vi': '/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_vi_zscore.pt',
+                'zh': '/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_zh_zscore.pt',
             }
         lang_list = ['en', 'vi', 'zh']
-        #lang_list = ['en']
-    
-    save_LRP_model(model, save_dir, activation_mask_path_map, lang_list)
-else:
+        
+        save_LRP_model(model, save_dir, activation_mask_path_map, lang_list)
 
-    # LRP random-mask model
-    save_dir= '/root/autodl-tmp/20250120_LRP_llama2_7b_base_BaseNeuron_random_BaseMask_lang_{}'
+
+if False:
+    #20260306 arr paper lrp
+    save_dir= '/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_{}'
     activation_mask_path_map = {
-            'en': '/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_en_zscore.pt',
-            'vi': '/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_vi_zscore.pt',
-            'zh': '/root/autodl-fs/LRP_kur_res/20260119_newrandom5000samples_cal_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_zh_zscore.pt',
-        }
+                        'en': '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_/th_1_selected_LRP_kur_res_en_zscore.pt',
+                        'vi': '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_/th_1_selected_LRP_kur_res_vi_zscore.pt',
+                        'zh': '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_/th_1_selected_LRP_kur_res_zh_zscore.pt'
+                    }
     lang_list = ['en', 'vi', 'zh']
-    
     save_LRP_model(model, save_dir, activation_mask_path_map, lang_list)
 
-
+if True:
+    #20260306 arr paper lrp ---random
+    save_dir= '/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_{}'
+    activation_mask_path_map = {
+                        'en': '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_en_zscore.pt',
+                        'vi': '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_vi_zscore.pt',
+                        'zh': '/root/autodl-fs/LRP_kur_res/20260304_arr_paper_llama2_7b_base_random_neuron_time0_/th_1_selected_LRP_kur_res_random_zh_zscore.pt'
+                    }
+    lang_list = ['en', 'vi', 'zh']
+    save_LRP_model(model, save_dir, activation_mask_path_map, lang_list)
 
 
 

@@ -4,17 +4,23 @@ source /etc/network_turbo
 export VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
 # model / task / output_dir / num_shot 
 EXPERIMENTS=(
-    "('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_en' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_en_belebele_vi' '5')"
-    "('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_vi' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_vi_belebele_vi' '5')"
-    "('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_zh' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_zh_belebele_vi' '5')"
-    "('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_en' 'ceval-valid' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_en_ceval-valid' '5')"
-    "('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_vi' 'ceval-valid' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_vi_ceval-valid' '5')"
-    "('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_zh' 'ceval-valid' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_zh_ceval-valid' '5')"
-    #"('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_en' 'mmlu' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_en_mmlu' '5')"
-    #"('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_vi' 'mmlu' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_vi_mmlu' '5')"
-    #"('/root/autodl-tmp/LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_zh' 'mmlu' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_base_BaseNeuron_RandomMask_lang_zh_mmlu' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_en' 'belebele_eng_Latn' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_en_belebele_en' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_vi' 'belebele_eng_Latn' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_vi_belebele_en' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_zh' 'belebele_eng_Latn' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_zh_belebele_en' '5')"
 
-
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_en' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_en_belebele_vi' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_vi' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_vi_belebele_vi' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_zh' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_zh_belebele_vi' '5')"
+    
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_en' 'belebele_zho_Hans' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_en_belebele_zh' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_vi' 'belebele_zho_Hans' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_vi_belebele_zh' '5')"
+    "('/root/autodl-tmp/20260306_arr_paper_llama2_7b_base_lrp_random_zh' 'belebele_zho_Hans' '/root/autodl-fs/llm_eval/20260306test_eval_arr_paper_llama2_7b_base_lrp_random_lang_zh_belebele_zh' '5')"
+    
+    #"('/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LAPE_llama2_7b_base_BaseNeuron_ChatMask_lang_zh_belebele_vi' '5')"
+    #"('/root/autodl-tmp/LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_en' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_en_belebele_vi' '5')"
+    #"('/root/autodl-tmp/LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_vi' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_vi_belebele_vi' '5')"
+    #"('/root/autodl-tmp/LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_zh' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_zh_belebele_vi' '5')"
+    
     #"('/root/autodl-fs/model_zoo/meta-llama/Llama-2-7b-hf' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LAPE_llama2_7b_base_BaseNeuron_ChatMask_lang_zh_belebele_vi' '5')"
     #"('/root/autodl-tmp/LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_en' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_en_belebele_vi' '5')"
     #"('/root/autodl-tmp/LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_vi' 'belebele_vie_Latn' '/root/autodl-fs/llm_eval/test_eval_LRP_llama2_7b_chat_BaseNeuron_ChatMask_lang_vi_belebele_vi' '5')"
