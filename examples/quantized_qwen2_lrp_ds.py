@@ -33,7 +33,7 @@ def get_lrp_res(data_path, output_dir, model, tokenizer ):
     
     # Q& A
     def map(sample):
-        tmp = [icon['content'] for icon in sample['message']]
+        tmp = [icon['content'] for icon in sample['messages']]
         sample['text'] = '\n\n'.join(tmp)
         return sample
     prompt= prompt.map(map)
