@@ -14,50 +14,8 @@ from tqdm import tqdm
 import datasets
 import math
 import os
-import argparse
-
-MAX_LEN = 4096 - 512
-
-
-parser = argparse.ArgumentParser()
-
-parser.add_argument(
-    "--num_parts",
-    type=int,
-    default=4,
-    help="Total number of data shards."
-)
-
-parser.add_argument(
-    "--part_id",
-    type=int,
-    required=True,
-    help="Current shard id, range: [0, num_parts-1]."
-)
-
-args = parser.parse_args()
-
-num_parts = args.num_parts
-part_id = args.part_id
-
-
-if num_parts <= 0:
-    raise ValueError(
-        f"num_parts must be > 0, got {num_parts}"
-    )
-
-if not 0 <= part_id < num_parts:
-    raise ValueError(
-        f"part_id must satisfy 0 <= part_id < num_parts, "
-        f"got part_id={part_id}, num_parts={num_parts}"
-    )
-
-print("=" * 80)
-print(f"num_parts = {num_parts}")
-print(f"part_id   = {part_id}")
-print("=" * 80)
-
-
+MAX_LEN=4096-512
+part_id = 0
 
 def get_lrp_res(data_path, output_dir, model, tokenizer ):
     prompt = """Context: The Eiffel Tower, built in 1889, was the world's tallest man-made structure for 41 years. It is 330 meters tall and has three levels for visitors.
@@ -76,6 +34,7 @@ def get_lrp_res(data_path, output_dir, model, tokenizer ):
 
 
     # 四个进程分别设置 part_id = 0, 1, 2, 3
+    num_parts = 4
 
     
     prompt = datasets.load_dataset(
@@ -260,9 +219,9 @@ exp_setting=[
 exp_setting=[
     
     {
-        'model':'/root/autodl-fs/model_zoo/Qwen/Qwen2-7B',
+        'model':'/root/autodl-fs/model_zoo/Qwen/Qwen2-1.5B',
         'language':'en',
-        'prefix_output_dir':f'/root/autodl-fs/LRP_DS/output/Qwen2-7B_tulu3_100k_alpha05_part_{part_id}',
+        'prefix_output_dir':f'/root/autodl-fs/LRP_DS/output/Qwen2-1.5B_tulu3_100k_alpha05_part_{part_id}',
         'data_path':'/root/autodl-fs/LRP_DS/data/tulu3_100k_alpha05.jsonl'
     }
 ]
