@@ -15,7 +15,7 @@ import datasets
 import math
 import os
 MAX_LEN=4096-512
-part_id = 0
+part_id = 1
 
 def get_lrp_res(data_path, output_dir, model, tokenizer ):
     prompt = """Context: The Eiffel Tower, built in 1889, was the world's tallest man-made structure for 41 years. It is 330 meters tall and has three levels for visitors.
