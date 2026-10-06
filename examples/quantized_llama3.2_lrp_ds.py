@@ -122,8 +122,9 @@ def get_lrp_res(data_path, output_dir, model, tokenizer ):
     # get all parameter name
     # 遍历模型的所有命名参数
     for name, param in model.named_parameters():
-        # 检查参数是否有梯度
-        res_map[name] = []
+        # 检查参数是否有梯度 & select name
+        if "mlp.down_proj" in name:
+            res_map[name] = []
             
     for iprompt in prompt:
         model.zero_grad()
