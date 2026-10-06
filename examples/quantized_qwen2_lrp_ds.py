@@ -260,9 +260,9 @@ exp_setting=[
 exp_setting=[
     
     {
-        'model':'/root/autodl-fs/model_zoo/Qwen/Qwen2-7B',
+        'model':'/root/autodl-fs/model_zoo/Qwen/Qwen2.5-3B',
         'language':'en',
-        'prefix_output_dir':f'/root/autodl-fs/LRP_DS/output/Qwen2-7B_tulu3_100k_alpha05_part_{part_id}',
+        'prefix_output_dir':f'/root/autodl-fs/LRP_DS/output/Qwen2.5-3B_tulu3_100k_alpha05_part_{part_id}',
         'data_path':'/root/autodl-fs/LRP_DS/data/tulu3_100k_alpha05.jsonl'
     }
 ]
